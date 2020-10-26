@@ -87,7 +87,7 @@
             <Image url="@../images/arrowup.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="12.0" fitWidth="24.0" layoutX="180.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fitHeight="12.0" fitWidth="24.0" layoutX="180.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/arrowup.png" />
          </image>
