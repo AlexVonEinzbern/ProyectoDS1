@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import modelo.Conexion;
 
 public class Main extends Application {
 
@@ -19,6 +20,8 @@ public class Main extends Application {
         scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        Conexion con = new Conexion();
     }
 
 
