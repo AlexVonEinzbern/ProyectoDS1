@@ -10,17 +10,15 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import modelo.Conexion;
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 
 public class Main extends Application {
-    private double xoffset;
-    private double yoffset;
     @Override
-    public void start(@NotNull Stage primaryStage) throws Exception{
+    public void start( Stage primaryStage) throws Exception{
 
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-
+/*
         //esto es para que la interfaz se pueda mover con el mouse
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
@@ -38,7 +36,7 @@ public class Main extends Application {
             }
         });
 
-
+*/
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         Scene scene=new Scene(root);
         scene.setFill(Color.TRANSPARENT);
