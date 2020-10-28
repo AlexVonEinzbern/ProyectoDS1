@@ -10,11 +10,11 @@ public ConeccionBase(){iniciarC();}
         try {
             Class.forName("org.postgresql.Driver");
             this.base = DriverManager.getConnection(urlDatabase,  "postgres", "1830628");
-
+            System.out.println("Conexión Exitosa");
         } catch (Exception e) {
             System.out.println("Ocurrio un error : "+e.getMessage());
         }
-        System.out.println("Conexión Exitosa");
+
     }
     public Connection getConect() {
         return base;
