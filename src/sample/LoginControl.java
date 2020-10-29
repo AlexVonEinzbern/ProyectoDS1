@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class LoginControl {
     ConeccionBase base;
     public LoginControl(){
-        base = new ConeccionBase();
+       base = new ConeccionBase();
     }
     @FXML
     private Button lgin;
@@ -29,26 +29,29 @@ public class LoginControl {
     void ConsultaLogin(ActionEvent event) throws SQLException, IOException {
 
         Window owner = lgin.getScene().getWindow();
-        String passwordbase = "as" ; //base.consulta();
-        String usserbase = "as"; //base.consulta();
+
+
         String password = contraseña.getText() ;
         String usser = usuario.getText();
-        if(password.isEmpty()) {
+        String usserbase = base.consulta
+                ("Select idusuario from usuarios where idusuario = "+usser,"idusuario");
+        String passwordbase = base.consulta
+                ("select password from usuarios where idusuario = "+usser,"password");
+        Boolean activo = base.consultaBool
+                ("select estaactivo from usuarios where idusuario ="+usser,"estaactivo");
+
+        if(password.isEmpty()|| usser.isEmpty()) {
             VentanaAvisos.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
-                    "Por favor ingresa la contraseña");
+                    "usuario o contraceña vacios");
             return;
         }
-        if(usser.isEmpty()) {
-            VentanaAvisos.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
-                    "por favor ingresa el usuario");
-            return;
-        }
-         if(passwordbase.equals(password) && usserbase.equals(usser)){
-             VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
-                     "Ingreso con exito","welcome "+ usser);
-             Ventana ventana = new Ventana(base.getConect(),"ventanaAdmin.fxml","Admin" );
-             Stage win = (Stage) this.contraseña.getScene().getWindow();
-             win.close();
+        if(passwordbase.equals(password) && usserbase.equals(usser) && activo){
+            Ventana ventana = new Ventana(base.getConect(),"ventanaAdmin.fxml","Admin" );
+            owner = ventana.getScene().getWindow();
+            VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
+                    "Ingreso con exito","welcome "+ usser);
+            Stage win = (Stage) this.contraseña.getScene().getWindow();
+            win.close();
          }else {
              VentanaAvisos.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                      "Usuario o contraseña incorrectos por favor verifique la informacion");
