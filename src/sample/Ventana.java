@@ -14,7 +14,7 @@ public class Ventana extends Stage {
     public Ventana(Connection base,String fxmlrute,String title) throws IOException {
         this.base=base;
         Parent root = FXMLLoader.load(getClass().getResource(fxmlrute));
-        Scene scene = new Scene(root,500,500);
+        Scene scene = new Scene(root);
         this.setScene(scene);
         this.setTitle(title);
         this.show();

@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.FormularioUsuariosControl"
-            prefHeight="400.0" prefWidth="600.0">
 
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FormularioUsuariosControl">
+   <children>
+      <Label layoutX="65.0" layoutY="59.0" text="Nombre" />
+      <TextField fx:id="nombreUsuario" layoutX="140.0" layoutY="54.0" />
+      <Label layoutX="65.0" layoutY="94.0" text="Cedula" />
+      <TextField fx:id="cedulaUsuario" layoutX="140.0" layoutY="89.0" />
+      <Label layoutX="65.0" layoutY="129.0" text="Direccion" />
+      <TextField fx:id="direccionUsu" layoutX="140.0" layoutY="124.0" />
+      <Label layoutX="65.0" layoutY="162.0" text="Tetelefono" />
+      <TextField fx:id="telefonoUsu" layoutX="140.0" layoutY="157.0" />
+      <Label layoutX="65.0" layoutY="196.0" text="Sede" />
+      <Label layoutX="65.0" layoutY="230.0" text="Rol" />
+      <ChoiceBox value="Admin" fx:id="roles" layoutX="140.0" layoutY="225.0" prefWidth="150.0" >
+       <items>
+           <FXCollections fx:factory="observableArrayList" >
+               <String fx:value="Admin"/>
+               <String fx:value="Gerente"/>
+               <String fx:value="Obrero"/>
+           </FXCollections>
+       </items>
+      </ChoiceBox>
+       <ChoiceBox  value="Norte" fx:id="sedes" layoutX="140.0" layoutY="191.0" prefWidth="150.0" >
+           <items>
+               <FXCollections  fx:factory="observableArrayList" >
+                   <String fx:value="Norte"/>
+                   <String fx:value="Sur"/>
+               </FXCollections>
+           </items>
+       </ChoiceBox>
+      <Button fx:id="guardar" layoutX="249.0" layoutY="288.0" mnemonicParsing="false" onAction="#crearUsuario" text="Guardar" />
+      <Button fx:id="Limpiar" layoutX="157.0" layoutY="288.0" mnemonicParsing="false" onAction="#borrarDatos" text="Limpiar" />
+      <Button fx:id="salir" layoutX="69.0" layoutY="288.0" mnemonicParsing="false" onAction="#CerrarVentana" text="Salir" />
+
+   </children>
 </AnchorPane>
