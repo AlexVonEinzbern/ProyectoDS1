@@ -1,4 +1,4 @@
-package sample;
+package files.modelo;
 import javafx.scene.control.Alert;
 import javafx.stage.Window;
 public class VentanaAvisos {

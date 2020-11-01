@@ -9,7 +9,7 @@
 
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FormularioUsuariosControl">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="385.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="files.control.FormUsuariosControl">
    <children>
       <Label layoutX="65.0" layoutY="59.0" text="Nombre" />
       <TextField fx:id="nombreUsuario" layoutX="140.0" layoutY="54.0" />
@@ -21,7 +21,7 @@
       <TextField fx:id="telefonoUsu" layoutX="140.0" layoutY="157.0" />
       <Label layoutX="65.0" layoutY="196.0" text="Sede" />
       <Label layoutX="65.0" layoutY="230.0" text="Rol" />
-      <ChoiceBox fx:id="roles" layoutX="140.0" layoutY="225.0" prefWidth="150.0" >
+      <ChoiceBox value="Admin" fx:id="roles" layoutX="140.0" layoutY="225.0" prefWidth="150.0" >
        <items>
            <FXCollections fx:factory="observableArrayList" >
                <String fx:value="Admin"/>
@@ -30,9 +30,17 @@
            </FXCollections>
        </items>
       </ChoiceBox>
+       <ChoiceBox  value="Norte" fx:id="sedes" layoutX="140.0" layoutY="191.0" prefWidth="150.0" >
+           <items>
+               <FXCollections  fx:factory="observableArrayList" >
+                   <String fx:value="Norte"/>
+                   <String fx:value="Sur"/>
+               </FXCollections>
+           </items>
+       </ChoiceBox>
       <Button fx:id="guardar" layoutX="249.0" layoutY="288.0" mnemonicParsing="false" onAction="#crearUsuario" text="Guardar" />
       <Button fx:id="Limpiar" layoutX="157.0" layoutY="288.0" mnemonicParsing="false" onAction="#borrarDatos" text="Limpiar" />
       <Button fx:id="salir" layoutX="69.0" layoutY="288.0" mnemonicParsing="false" onAction="#CerrarVentana" text="Salir" />
-      <ChoiceBox fx:id="sedes" layoutX="140.0" layoutY="191.0" prefWidth="150.0" />
+
    </children>
 </AnchorPane>

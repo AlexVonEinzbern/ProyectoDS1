@@ -1,13 +1,21 @@
-package sample;
+package files.control;
 
+import files.modelo.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
-public class FormularioUsuariosControl {
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class FormUsuariosControl {
     Usuario nuevo;
+
 
     @FXML
     private TextField nombreUsuario;
@@ -49,6 +57,11 @@ public class FormularioUsuariosControl {
     @FXML
     void crearUsuario(ActionEvent event) {
 
+
+        String cedula = cedulaUsuario.getText();
+        nuevo= new Usuario(nombreUsuario.getText(), Integer.parseInt(cedula),
+                direccionUsu.getText(), Integer.parseInt(telefonoUsu.getText()),new Date(System.currentTimeMillis()),
+                sedes.getValue().toString(),roles.getValue().toString(),true, cedula);
     }
 
 }
