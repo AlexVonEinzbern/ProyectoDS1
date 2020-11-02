@@ -5,7 +5,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml">
-    <Button fx:id="btAnadir" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#addUsuario" text="Añadir Usuario" />
+    <Button fx:id="btAnadir" layoutX="14.0" layoutY="14.0" mnemonicParsing="false"
+            onAction="#addUsuario" text="Añadir Usuario" />
    <Button layoutX="16.0" layoutY="50.0" mnemonicParsing="false" text="Editar Usuario" />
    <Button layoutX="16.0" layoutY="85.0" mnemonicParsing="false" text="Act/des Usuarios" />
    <Button layoutX="16.0" layoutY="123.0" mnemonicParsing="false" text="Estado de Usuarios" />

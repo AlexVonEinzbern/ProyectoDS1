@@ -1,6 +1,7 @@
 package files.control;
 import files.modelo.VentanaAvisos;
 import files.modelo.ConexionBase;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +11,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -23,10 +27,8 @@ public class LoginControl {
        this.con = con;
     }
     @FXML
-    private Button lgin;
+    private Button entrar;
 
-    @FXML
-    private PasswordField contraseña;
 
     @FXML
     private TextField usuario;
@@ -71,6 +73,9 @@ public class LoginControl {
     }
 
     @FXML
+    private TextField contraseña;
+
+    @FXML
     void press(MouseEvent event) {
         xoffset=event.getSceneX();
         yoffset=event.getSceneY();
@@ -79,7 +84,7 @@ public class LoginControl {
     void ConsultaLogin(ActionEvent event) throws SQLException, IOException {
 
 
-        Window owner = lgin.getScene().getWindow();
+        Window owner = entrar.getScene().getWindow();
         String password = contraseña.getText() ;
         int usser = 0;
         try {
