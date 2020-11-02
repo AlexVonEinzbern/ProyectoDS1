@@ -1,9 +1,11 @@
 package files.control;
 import files.modelo.VentanaAvisos;
 import files.modelo.ConexionBase;
-import files.modelo.Ventana;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -14,10 +16,6 @@ import javafx.stage.Window;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
 
 public class LoginControl {
     ConexionBase con;
@@ -72,13 +70,56 @@ public class LoginControl {
         if(passwordbase.equals(password)  && activo){
             switch(rol){
                 case "Admin":
-            Ventana ventana = new Ventana(con,"../vista/ventanaAdmin.fxml",rol );
-            owner = ventana.getScene().getWindow();
-            VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
-                    "Ingreso con exito","welcome "+ usser);
-            Stage win = (Stage) this.contraseña.getScene().getWindow();
+                    //Ventana ventana = new Ventana(con,"../vista/ventanaAdmin.fxml",rol );
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin.fxml"));
+                    AdminControl controller = new AdminControl(con);
+                    loader.setController(controller);
+                    Parent root = loader.load();
+                    Scene scene = new Scene(root);
+                    Stage ventana = new Stage();
+                    ventana.setScene(scene);
+                    ventana.setTitle("Admin");
+                    ventana.show();
+                    owner = ventana.getScene().getWindow();
+                    VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
+                            "Ingreso con exito","welcome "+ usser);
+                    Stage win = (Stage) this.contraseña.getScene().getWindow();
+                    win.close();
+                    break;
+                case "Obrero":
+                    loader = new FXMLLoader(getClass().getResource("../vista/ventanaaObreo.fxml"));
+                    ObreroControl contro = new ObreroControl(con);
+                    loader.setController(contro);
+                    root = loader.load();
+                    scene = new Scene(root);
+                    ventana = new Stage();
+                    ventana.setScene(scene);
+                    ventana.setTitle("Obrero");
+                    ventana.show();
+                    owner = ventana.getScene().getWindow();
+                    VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
+                            "Ingreso con exito","welcome "+ usser);
+                    win = (Stage) this.contraseña.getScene().getWindow();
+                    win.close();
+                    break;
+                case "Gerente":
+                     loader = new FXMLLoader(getClass().getResource("../vista/ventanaGerente.fxml"));
+                    GerenteControl contr = new GerenteControl(con);
+                    loader.setController(contr);
+                    root = loader.load();
+                    scene = new Scene(root);
+                    ventana = new Stage();
+                    ventana.setScene(scene);
+                    ventana.setTitle("Gerente");
+                    ventana.show();
 
-            win.close();
+                    owner = ventana.getScene().getWindow();
+                    VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
+                            "Ingreso con exito","welcome "+ usser);
+                    win = (Stage) this.contraseña.getScene().getWindow();
+                    win.close();
+                    break;
+
             }
          }else {
              VentanaAvisos.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",

@@ -1,5 +1,6 @@
 package files.control;
 
+import files.modelo.ConexionBase;
 import files.modelo.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +15,12 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class FormUsuariosControl {
-    Usuario nuevo;
+    private Usuario nuevo;
+    private ConexionBase con;
+    public FormUsuariosControl(ConexionBase con){
+        this.con = con;
+    }
+
 
 
     @FXML

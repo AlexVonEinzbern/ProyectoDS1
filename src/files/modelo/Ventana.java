@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
-
+// USELESS
 public class Ventana extends Stage {
 
     private ConexionBase con;
