@@ -79,6 +79,7 @@
                             </cursor>
                         </TextField>
                         <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+<<<<<<< HEAD
                   <PasswordField fx:id="contrasena" alignment="CENTER" promptText="Contraseña" style="-fx-background-color: #0c162b; -fx-border-color: #00ab11; -fx-border-radius: 5 5 5 5;">
                      <VBox.margin>
                         <Insets left="100.0" right="100.0" />
@@ -87,6 +88,16 @@
                         <Font name="KacstDigital" size="17.0" />
                      </font>
                   </PasswordField>
+=======
+                        <TextField fx:id="contraseña" alignment="CENTER" promptText="Contraseña" style="-fx-background-color: #0c162b; -fx-border-color: #00ab11; -fx-border-radius: 5 5 5 5;">
+                            <VBox.margin>
+                                <Insets left="100.0" right="100.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="KacstDigital" size="17.0" />
+                            </font>
+                        </TextField>
+>>>>>>> ee63c6eb5349778231e011d1a81e226f0836b558
                         <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                         <HBox prefHeight="100.0" prefWidth="200.0">
                             <children>
