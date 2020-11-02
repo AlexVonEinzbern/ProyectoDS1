@@ -99,17 +99,24 @@ public class LoginControl {
 
         ResultSet rs = con.consultar
                 ("Select * from usuarios where idusuario = "+usser);
+
         int usserbase = 0;
         String passwordbase = null;
         Boolean activo= null;
         String rol= null ;
+
         while(rs.next()){
              usserbase = rs.getInt("idusuario");
              passwordbase = rs.getString("password");
              activo = rs.getBoolean("estaactivo");
              rol = rs.getString("rolusuario");
         }
-         //   System.out.println(usserbase +"  "+ passwordbase +"  " + activo +"   "+ rol );
+        if(usserbase ==0){
+            VentanaAvisos.showAlert(Alert.AlertType.ERROR,owner,
+                    "Error","El usuario ingresado no esta registrado en el sistema");
+            return;
+        }
+         //  System.out.println(usserbase +"  "+ passwordbase +"  " + activo +"   "+ rol );
          //   System.out.println(passwordbase.equals(password) +"  "+ usserbase==usser +"   "+ activo);
         if(passwordbase.equals(password)  && activo){
             switch(rol){

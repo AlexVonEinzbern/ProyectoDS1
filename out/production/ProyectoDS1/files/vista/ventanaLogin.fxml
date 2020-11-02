@@ -13,6 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.PasswordField?>
 <AnchorPane fx:id="ventanaLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#move" onMousePressed="#press" prefHeight="480.0" prefWidth="380.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <AnchorPane prefHeight="70.0" prefWidth="448.0" style="-fx-background-color: #0c162b; -fx-background-radius: 20 20 0 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -63,7 +64,7 @@
                         <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                         <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                         <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                        <TextField alignment="CENTER" promptText="Usuario" style="-fx-background-color: #0c162b; -fx-border-color: #00ab11; -fx-border-radius: 5 5 5 5;">
+                        <TextField fx:id="usuario" alignment="CENTER" promptText="Usuario" style="-fx-background-color: #0c162b; -fx-border-color: #00ab11; -fx-border-radius: 5 5 5 5;">
                             <VBox.margin>
                                 <Insets left="100.0" right="100.0" />
                             </VBox.margin>
@@ -78,14 +79,14 @@
                             </cursor>
                         </TextField>
                         <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                        <TextField fx:id="contraseña" alignment="CENTER" promptText="Contraseña" style="-fx-background-color: #0c162b; -fx-border-color: #00ab11; -fx-border-radius: 5 5 5 5;">
+                        <PasswordField fx:id="contraseña" alignment="CENTER" promptText="Contraseña" style="-fx-background-color: #0c162b; -fx-border-color: #00ab11; -fx-border-radius: 5 5 5 5;">
                             <VBox.margin>
                                 <Insets left="100.0" right="100.0" />
                             </VBox.margin>
                             <font>
                                 <Font name="KacstDigital" size="17.0" />
                             </font>
-                        </TextField>
+                        </PasswordField>
                         <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                         <HBox prefHeight="100.0" prefWidth="200.0">
                             <children>
