@@ -28,6 +28,7 @@ public class AdminControl {
     @FXML
     private AnchorPane panelAccion;
 
+
     @FXML
     void addUsuario(ActionEvent event) throws IOException {
         AnchorPane panel;
