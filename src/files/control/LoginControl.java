@@ -119,7 +119,6 @@ public class LoginControl {
                     win = (Stage) this.contraseña.getScene().getWindow();
                     win.close();
                     break;
-
             }
          }else {
              VentanaAvisos.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",

@@ -62,8 +62,6 @@ public class FormUsuariosControl {
 
     @FXML
     void crearUsuario(ActionEvent event) {
-
-
         String cedula = cedulaUsuario.getText();
         nuevo= new Usuario(nombreUsuario.getText(), Integer.parseInt(cedula),
                 direccionUsu.getText(), Integer.parseInt(telefonoUsu.getText()),new Date(System.currentTimeMillis()),
