@@ -78,7 +78,7 @@
                             </cursor>
                         </TextField>
                         <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                        <TextField alignment="CENTER" promptText="Contraseña" style="-fx-background-color: #0c162b; -fx-border-color: #00ab11; -fx-border-radius: 5 5 5 5;">
+                        <TextField fx:id="contraseña" alignment="CENTER" promptText="Contraseña" style="-fx-background-color: #0c162b; -fx-border-color: #00ab11; -fx-border-radius: 5 5 5 5;">
                             <VBox.margin>
                                 <Insets left="100.0" right="100.0" />
                             </VBox.margin>

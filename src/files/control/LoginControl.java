@@ -23,23 +23,19 @@ import java.sql.SQLException;
 
 public class LoginControl {
     ConexionBase con;
+    private double xoffset;
+    private double yoffset;
     public LoginControl(ConexionBase con){
        this.con = con;
     }
-    @FXML
-    private Button entrar;
-
-
-    @FXML
-    private TextField usuario;
-
-    private double xoffset;
-    private double yoffset;
+    @FXML private Button entrar;
+    @FXML private TextField usuario;
     @FXML private ImageView loginArrow;
     @FXML private ImageView helpArrow;
     @FXML private AnchorPane loginPanel;
     @FXML private AnchorPane helpPanel;
     @FXML private AnchorPane ventanaLogin;
+    @FXML private TextField contraseña;
 
     public void botonExit(MouseEvent event){
         Platform.exit();
@@ -72,8 +68,7 @@ public class LoginControl {
 
     }
 
-    @FXML
-    private TextField contraseña;
+
 
     @FXML
     void press(MouseEvent event) {
