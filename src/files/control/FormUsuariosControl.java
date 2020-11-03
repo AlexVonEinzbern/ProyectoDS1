@@ -62,16 +62,7 @@ public class FormUsuariosControl {
        /* nuevo= new Usuario(nombreUsuario.getText(), Integer.parseInt(cedula),
                 direccionUsu.getText(), Integer.parseInt(telefonoUsu.getText()),new Date(System.currentTimeMillis()),
                 sedes.getValue().toString(),roles.getValue().toString(),true, cedula);
-
-        con.guardar("INSERT INTO usuarios (nombreusuario, cedulausuario," +
-        " direccionusuario, telefonousuario, fechaingresousuario, sucursalusuario," +
-        " rolusuario, password) VALUES(" +
-        "'"+nombreUsuario.getText()+"', "+Integer.parseInt(cedula)+", '"+direccionUsu.getText()+"',"+
-        Integer.parseInt(telefonoUsu.getText())+", '"+new Date(System.currentTimeMillis())+"',"+ "'"+
-        sedes.getValue().toString()+"', '"+roles.getValue().toString()+"',true,"+ cedula+")");
-        */
-       // int i = con.guardar("INSERT INTO usuarios (nombreusuario, cedulausuario, direccionusuario, telefonousuario, fechaingresousuario, sucursalusuario, rolusuario, password,emailusuario) " +
-         //       "VALUES('"+nombreUsuario.getText()+"', "+cedula+", '"+direccionUsuario.getText()+"',"+ telefonoUsuario+", '2020-10-21', '"+sedes.getValue().toString()+"', '"+roles.getValue().toString()+"', '"+cedula+"' , '"+emailusuario.getText()+"');");
+*/
         int in = con.guardar("INSERT INTO usuarios (nombreusuario, cedulausuario, direccionusuario, telefonousuario," +
                 "                fechaingresousuario, sucursalusuario, rolusuario, password,estadousuario,emailusuario)" +
                 "                VALUES('"+nom+"', "+ced+", '"+dir+"', "+tel+"," +
@@ -83,7 +74,7 @@ public class FormUsuariosControl {
     }
 
     private void clear(){
-       nombre.setText("");
+       nombre.clear();
        cedula.clear();
        direccion.clear();
        telefono.clear();
