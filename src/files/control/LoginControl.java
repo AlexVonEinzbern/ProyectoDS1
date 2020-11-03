@@ -68,8 +68,6 @@ public class LoginControl {
 
     }
 
-
-
     @FXML
     void press(MouseEvent event) {
         xoffset=event.getSceneX();
