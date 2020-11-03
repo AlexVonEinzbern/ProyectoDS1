@@ -41,7 +41,7 @@ public class AdminControl {
         loader.setController(controller);
         AnchorPane root = loader.load();
         btAnadir.setDisable(true);
-        panelAccion.getChildren().add(root) ;
+        panelAccion.getChildren().add(panel) ;
 
        /* Scene scene = new Scene();
         Stage ventana = new Stage();

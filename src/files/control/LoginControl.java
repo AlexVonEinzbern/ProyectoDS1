@@ -35,7 +35,7 @@ public class LoginControl {
     @FXML private AnchorPane loginPanel;
     @FXML private AnchorPane helpPanel;
     @FXML private AnchorPane ventanaLogin;
-    @FXML private TextField contraseña;
+    @FXML private PasswordField contrasena;
 
     public void botonExit(MouseEvent event){
         Platform.exit();
@@ -78,7 +78,7 @@ public class LoginControl {
 
 
         Window owner = entrar.getScene().getWindow();
-        String password = contraseña.getText() ;
+        String password = contrasena.getText() ;
         String usser = null;
         usser = usuario.getText();
         if(password.isEmpty() || (usser == null)){
@@ -126,7 +126,7 @@ public class LoginControl {
                     owner = ventana.getScene().getWindow();
                     VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
                             "Ingreso con exito","welcome "+ nombre);
-                    Stage win = (Stage) this.contraseña.getScene().getWindow();
+                    Stage win = (Stage) this.contrasena.getScene().getWindow();
                     win.close();
                     break;
                 case "Obrero":
@@ -142,7 +142,7 @@ public class LoginControl {
                     owner = ventana.getScene().getWindow();
                     VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
                             "Ingreso con exito","welcome "+ nombre);
-                    win = (Stage) this.contraseña.getScene().getWindow();
+                    win = (Stage) this.contrasena.getScene().getWindow();
                     win.close();
                     break;
                 case "Gerente":
@@ -159,7 +159,7 @@ public class LoginControl {
                     owner = ventana.getScene().getWindow();
                     VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
                             "Ingreso con exito","welcome "+ nombre);
-                    win = (Stage) this.contraseña.getScene().getWindow();
+                    win = (Stage) this.contrasena.getScene().getWindow();
                     win.close();
                     break;
             }
