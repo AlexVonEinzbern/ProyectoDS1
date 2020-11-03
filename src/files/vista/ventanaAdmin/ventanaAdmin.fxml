@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -28,11 +29,7 @@
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField fx:id="fecha" prefHeight="10.0" promptText="Fecha de ingreso" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </TextField>
+                  <DatePicker fx:id="fecha" prefWidth="386.0" promptText="Fecha de ingreso" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-min-width: 90; -fx-pref-height: 200;" />
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                   <TextField fx:id="rol" prefHeight="10.0" promptText="Cargo" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
@@ -70,26 +67,21 @@
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField fx:id="estado" prefHeight="10.0" promptText="Estado" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </TextField>
-                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                   <TextField fx:id="password" prefHeight="10.0" promptText="Contraseña" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                </children>
             </VBox>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="348.0" layoutY="470.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="380.0">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
          </children></AnchorPane>
       <AnchorPane style="-fx-background-color: #0c162b;" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
