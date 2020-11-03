@@ -33,8 +33,8 @@ public class AdminControl {
         loader.setController(controller);
         Parent root = loader.load();
         btAnadir.setDisable(true);
-        this.btAnadir.getScene().setRoot(root);
-        //panelPrincipal.getChildren().add(root) ;
+        //this.btAnadir.getScene().setRoot(root);
+        panelPrincipal.getChildren().add(root) ;
     }
 
 
