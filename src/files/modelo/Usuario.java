@@ -5,7 +5,8 @@ import java.sql.Date;
 public class Usuario {
  private String nombre ;
  private  int cedula;
- private String direccionU;
+ private String direccion;
+ private String email;
  private int telefono;
  private Date fecha;
  private String sucursal;
@@ -15,7 +16,7 @@ public class Usuario {
 public Usuario(String nombre, int cedula, String direccionU,
                int telefono, Date fecha, String sucursal, String rol, boolean estado, String password){
     this.cedula =cedula;
-    this.direccionU =direccionU;
+    this.direccion =direccionU;
     this.estado=estado;
     this.fecha=fecha;
     this.nombre=nombre;
@@ -33,8 +34,8 @@ public Usuario(String nombre, int cedula, String direccionU,
         return cedula;
     }
 
-    public String getDireccionU() {
-        return direccionU;
+    public String getDireccion() {
+        return direccion;
     }
 
     public int getTelefono() {
@@ -51,6 +52,10 @@ public Usuario(String nombre, int cedula, String direccionU,
 
     public String getRol() {
         return rol;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public boolean isEstado() {

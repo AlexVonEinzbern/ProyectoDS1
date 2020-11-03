@@ -81,43 +81,37 @@ public class LoginControl {
 
         Window owner = entrar.getScene().getWindow();
         String password = contraseña.getText() ;
-        int usser = 0;
-        try {
-            usser = Integer.parseInt(usuario.getText());
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-            VentanaAvisos.showAlert(Alert.AlertType.ERROR, owner, "Error!",
-                    "Ingrese un usuario valido ");
-        }
-
-
-        if(password.isEmpty() || (usser == 0)){
+        String usser = null;
+        usser = usuario.getText();
+        if(password.isEmpty() || (usser == null)){
             VentanaAvisos.showAlert(Alert.AlertType.ERROR, owner, " Error!",
                     "usuario o contraceña vacios");
             return;
         }
-
+        System.out.println(usser);
         ResultSet rs = con.consultar
-                ("Select * from usuarios where idusuario = "+usser);
+                ("Select * from usuarios where emailUsuario = '"+usser+"';");
 
-        int usserbase = 0;
+        String usserbase = null;
         String passwordbase = null;
         Boolean activo= null;
         String rol= null ;
+        String nombre= null ;
 
         while(rs.next()){
-             usserbase = rs.getInt("idusuario");
+             usserbase = rs.getString("emailusuario");
              passwordbase = rs.getString("password");
-             activo = rs.getBoolean("estaactivo");
+             activo = rs.getBoolean("estadousuario");
              rol = rs.getString("rolusuario");
+             nombre = rs.getString("nombreusuario");
         }
-        if(usserbase ==0){
+        if(usserbase ==null){
             VentanaAvisos.showAlert(Alert.AlertType.ERROR,owner,
                     "Error","El usuario ingresado no esta registrado en el sistema");
             return;
         }
-         //  System.out.println(usserbase +"  "+ passwordbase +"  " + activo +"   "+ rol );
-         //   System.out.println(passwordbase.equals(password) +"  "+ usserbase==usser +"   "+ activo);
+          // System.out.println(usserbase +"  "+ passwordbase +"  " + activo +"   "+ rol );
+           // System.out.println(passwordbase.equals(password) +"  "+ usserbase==usser +"   "+ activo);
         if(passwordbase.equals(password)  && activo){
             switch(rol){
                 case "Admin":
@@ -133,7 +127,7 @@ public class LoginControl {
                     ventana.show();
                     owner = ventana.getScene().getWindow();
                     VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
-                            "Ingreso con exito","welcome "+ usser);
+                            "Ingreso con exito","welcome "+ nombre);
                     Stage win = (Stage) this.contraseña.getScene().getWindow();
                     win.close();
                     break;
@@ -149,7 +143,7 @@ public class LoginControl {
                     ventana.show();
                     owner = ventana.getScene().getWindow();
                     VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
-                            "Ingreso con exito","welcome "+ usser);
+                            "Ingreso con exito","welcome "+ nombre);
                     win = (Stage) this.contraseña.getScene().getWindow();
                     win.close();
                     break;
@@ -166,7 +160,7 @@ public class LoginControl {
 
                     owner = ventana.getScene().getWindow();
                     VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
-                            "Ingreso con exito","welcome "+ usser);
+                            "Ingreso con exito","welcome "+ nombre);
                     win = (Stage) this.contraseña.getScene().getWindow();
                     win.close();
                     break;
