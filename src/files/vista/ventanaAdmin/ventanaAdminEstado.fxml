@@ -28,6 +28,11 @@
             </TextArea>
             <RadioButton fx:id="activar" layoutX="10.0" layoutY="215.0" mnemonicParsing="false" text="Activar" AnchorPane.leftAnchor="10.0" />
             <RadioButton fx:id="desactivar" layoutX="10.0" layoutY="245.0" mnemonicParsing="false" text="Desactivar" AnchorPane.leftAnchor="10.0" />
+            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="380.0" layoutY="229.0" mnemonicParsing="false" onAction="#addUsuario" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="229.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
