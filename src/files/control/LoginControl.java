@@ -86,7 +86,7 @@ public class LoginControl {
                     "usuario o contraceña vacios");
             return;
         }
-        System.out.println(usser);
+      //  System.out.println(usser);
         ResultSet rs = con.consultar
                 ("Select * from usuarios where emailUsuario = '"+usser+"';");
 
@@ -159,6 +159,7 @@ public class LoginControl {
                     owner = ventana.getScene().getWindow();
                     VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
                             "Ingreso con exito","welcome "+ nombre);
+                    // cierra la ventana de la cual proviene
                     win = (Stage) this.contrasena.getScene().getWindow();
                     win.close();
                     break;

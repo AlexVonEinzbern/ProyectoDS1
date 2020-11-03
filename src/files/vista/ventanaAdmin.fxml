@@ -8,7 +8,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="120.0" layoutY="215.0" prefHeight="449.0" prefWidth="913.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
       <AnchorPane style="-fx-background-color: #0c162b;" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox prefHeight="100.0" prefWidth="906.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
@@ -32,5 +31,6 @@
          </children>
       </AnchorPane>
       <Line fx:id="addUserBar" endX="306.5" endY="60.0" layoutX="9.0" layoutY="-12.0" startX="202.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" />
+      <AnchorPane fx:id="panelPrincipal" layoutX="120.0" layoutY="215.0" prefHeight="449.0" prefWidth="913.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
    </children>
 </AnchorPane>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
@@ -10,7 +13,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="900.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
    <children>
       <AnchorPane layoutX="120.0" layoutY="215.0" prefHeight="449.0" prefWidth="913.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
@@ -31,11 +36,14 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                   <DatePicker fx:id="fecha" prefWidth="386.0" promptText="Fecha de ingreso" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-min-width: 90; -fx-pref-height: 200;" />
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField fx:id="rol" prefHeight="10.0" promptText="Cargo" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </TextField>
+                  <ChoiceBox fx:id="roles" prefHeight="28.0" prefWidth="382.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Norte">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Norte" />
+                           <String fx:value="Sur" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                   <TextField fx:id="email" prefHeight="10.0" promptText="Correo electronico" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
@@ -61,19 +69,24 @@
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField fx:id="sucursal" prefHeight="10.0" promptText="Sucursal" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <ChoiceBox fx:id="sedes" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Admin">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Admin" />
+                           <String fx:value="Gerente" />
+                           <String fx:value="Obrero" />
+                        </FXCollections>
+                     </items>                  </ChoiceBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="contrasena" prefHeight="10.0" promptText="Contraseña" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField fx:id="password" prefHeight="10.0" promptText="Contraseña" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </TextField>
-                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE">
+                  <Button fx:id="registrar" onAction="#addUsuario" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                          prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #14862d;
+                          -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -89,7 +102,7 @@
                <children>
                   <Separator prefWidth="200.0" visible="false" />
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="btAnadir" mnemonicParsing="false" onAction="#addUsuario" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD USER" />
+                  <Button fx:id="btAnadir" mnemonicParsing="false"  prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD USER" />
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT USER" />
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />

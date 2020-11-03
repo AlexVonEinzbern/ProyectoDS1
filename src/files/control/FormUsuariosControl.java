@@ -2,12 +2,13 @@ package files.control;
 
 import files.modelo.ConexionBase;
 import files.modelo.Usuario;
+import files.modelo.VentanaAvisos;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
 
 import java.sql.Connection;
@@ -25,11 +26,12 @@ public class FormUsuariosControl {
 
 
 
-    @FXML    private TextField nombreUsuario;
-    @FXML    private TextField cedulaUsuario;
-    @FXML    private TextField direccionUsuario;
-    @FXML    private TextField telefonoUsuario;
-    @FXML    private TextField emailUsuario;
+    @FXML    private TextField nombre;
+    @FXML    private TextField cedula;
+    @FXML    private TextField direccion;
+    @FXML    private TextField telefono;
+    @FXML    private TextField contrasena;
+    @FXML    private TextField email;
     @FXML    private ChoiceBox<?> roles;
     @FXML    private ChoiceBox<?> sedes;
     @FXML    private DatePicker fecha;
@@ -45,15 +47,17 @@ public class FormUsuariosControl {
 
     }
 
-    @FXML    void crearUsuario(ActionEvent event) throws SQLException {
-        String nombre = nombreUsuario.getText(); ;
-        String cedula = cedulaUsuario.getText() ;
-        String direccion = direccionUsuario.getText() ;
-        String telefono = telefonoUsuario.getText() ;
-        String fechaIngreso = fecha.getValue().toString() ;
-        String email = emailUsuario.getText();
+    @FXML    void addUsuario(ActionEvent event) throws SQLException {
+        String nom = nombre.getText(); ;
+        String ced = cedula.getText() ;
+        String dir = direccion.getText() ;
+        String tel = telefono.getText() ;
+        String feIn = fecha.getValue().toString() ;
+        String em = email.getText();
+        String cont = contrasena.getText();
         String sede = sedes.getValue().toString();
         String rol = roles.getValue().toString();
+
 
        /* nuevo= new Usuario(nombreUsuario.getText(), Integer.parseInt(cedula),
                 direccionUsu.getText(), Integer.parseInt(telefonoUsu.getText()),new Date(System.currentTimeMillis()),
@@ -70,8 +74,22 @@ public class FormUsuariosControl {
          //       "VALUES('"+nombreUsuario.getText()+"', "+cedula+", '"+direccionUsuario.getText()+"',"+ telefonoUsuario+", '2020-10-21', '"+sedes.getValue().toString()+"', '"+roles.getValue().toString()+"', '"+cedula+"' , '"+emailusuario.getText()+"');");
         int in = con.guardar("INSERT INTO usuarios (nombreusuario, cedulausuario, direccionusuario, telefonousuario," +
                 "                fechaingresousuario, sucursalusuario, rolusuario, password,estadousuario,emailusuario)" +
-                "                VALUES('"+nombre+"', "+cedula+", '"+direccion+"', "+telefono+"," +
-                "               '"+fechaIngreso+"', '"+sede+"', '"+rol+"', '"+cedula+"',true,'"+email+"');");
+                "                VALUES('"+nom+"', "+ced+", '"+dir+"', "+tel+"," +
+                "               '"+feIn+"', '"+sede+"', '"+rol+"', '"+cont+"',true,'"+em+"');");
+        Window owner = nombre.getScene().getWindow();
+        VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
+                "Registro Usuarios","Haz registrado exitosamente un nuevo usario:"+ nom);
+        clear();
+    }
+
+    private void clear(){
+       nombre.setText("");
+       cedula.clear();
+       direccion.clear();
+       telefono.clear();
+       contrasena.clear();
+       email.clear();
+       fecha.setValue(null);
     }
 
 }
