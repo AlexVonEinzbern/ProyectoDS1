@@ -16,33 +16,33 @@
             <VBox prefHeight="520.0" prefWidth="473.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="475.0" AnchorPane.topAnchor="50.0">
                <children>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="nombre" prefHeight="10.0" promptText="Nombre" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="direccion" prefHeight="10.0" promptText="Direccion" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="fecha" prefHeight="10.0" promptText="Fecha de ingreso" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="rol" prefHeight="10.0" promptText="Cargo" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="email" prefHeight="10.0" promptText="Correo electronico" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
@@ -52,39 +52,44 @@
             <VBox layoutX="597.0" layoutY="-19.0" prefHeight="520.0" prefWidth="473.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="475.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                <children>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="cedula" prefHeight="10.0" promptText="Documento de identidad" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="telefono" prefHeight="10.0" promptText="Telefono" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="sucursal" prefHeight="10.0" promptText="Sucursal" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="estado" prefHeight="10.0" promptText="Estado" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField prefHeight="10.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="password" prefHeight="10.0" promptText="Contraseña" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                </children>
             </VBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="348.0" layoutY="470.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="380.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
       <AnchorPane style="-fx-background-color: #0c162b;" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
