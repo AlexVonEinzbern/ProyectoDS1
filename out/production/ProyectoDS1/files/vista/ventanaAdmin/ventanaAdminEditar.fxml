@@ -30,9 +30,9 @@
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <DatePicker fx:id="Editfecha" editable="false" prefWidth="386.0" promptText="Fecha de ingreso" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-min-width: 90; -fx-pref-height: 200;" />
+                  <TextField  fx:id="editFecha" editable="false" prefWidth="386.0" promptText="Fecha de ingreso" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-min-width: 90; -fx-pref-height: 200;" />
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <ChoiceBox fx:id="editRoles" prefHeight="28.0" prefWidth="382.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Norte">
+                  <ChoiceBox fx:id="editSedes" prefHeight="28.0" prefWidth="382.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Norte">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
                            <String fx:value="Norte" />
@@ -65,7 +65,7 @@
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <ChoiceBox fx:id="editSedes" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Admin">
+                  <ChoiceBox fx:id="editRoles" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Admin">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
                            <String fx:value="Admin" />
@@ -75,16 +75,16 @@
                      </items>
                   </ChoiceBox>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <ChoiceBox fx:id="editEstado" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Activo">
+                  <ChoiceBox  fx:id="editEstado" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Activo">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
                            <String fx:value="Activo" />
-                           <String fx:value="No Activo" />
+                           <String fx:value="Inactivo" />
                         </FXCollections>
                      </items>
                   </ChoiceBox>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <TextField fx:id="editContrasena1" layoutX="10.0" layoutY="283.0" prefHeight="10.0" promptText="Contraseña" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                  <TextField fx:id="editContrasena" layoutX="10.0" layoutY="283.0" prefHeight="10.0" promptText="Contraseña" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
                      <font>
                         <Font size="17.0" />
                      </font>

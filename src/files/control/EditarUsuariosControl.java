@@ -10,6 +10,7 @@ import javafx.stage.Window;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class EditarUsuariosControl {
     private ConexionBase con;
@@ -20,13 +21,13 @@ public class EditarUsuariosControl {
     @FXML   private Button buscar;
     @FXML   private TextField editNombre;
     @FXML   private TextField editDireccion;
-    @FXML   private DatePicker editFecha;
-    @FXML   private ChoiceBox<?> editRoles;
+    @FXML   private TextField editFecha;
+    @FXML   private ChoiceBox<String> editRoles;
     @FXML   private TextField editEmail;
     @FXML   private TextField editCedula;
     @FXML   private TextField editTelefono;
-    @FXML   private ChoiceBox<?> editSedes;
-    @FXML   private ChoiceBox<?> editEstado;
+    @FXML   private ChoiceBox<String> editSedes;
+    @FXML   private ChoiceBox<String> editEstado;
     @FXML   private TextField editContrasena;
     @FXML   private TextField idUsuario;
     @FXML   private Button registrar;
@@ -44,7 +45,7 @@ public class EditarUsuariosControl {
     int cedCon ;
     String dirCon = null;
     int telCon ;
-    Date feInCon = null;
+    String feInCon = null;
     String emCon =null;
     String contCon = null;
     String sedeCon =null;
@@ -54,11 +55,15 @@ public class EditarUsuariosControl {
 
     @FXML   void editUsuario(ActionEvent event) throws SQLException {
         getValues();
-        // no funciona bien CORREGIR estado no es boolean
+        if(est.equals("Activo")){
+            est="true";
+        }else{
+            est="false";
+        }
         int in = con.guardar("UPDATE usuarios  SET nombreusuario = '"+nom+"', cedulausuario = "+ced+"," +
                 " direccionusuario = '"+dir+"', telefonousuario = "+tel+",sucursalusuario = '"+ sede+"'," +
-                " rolusuario "+rol+", password '"+cont+"' ,estadousuario = "+est+",emailusuario ='"+em+"'" +
-                " WHERE idUsuario = ");
+                " rolusuario = '"+rol+"' , password = '"+cont+"' ,estadousuario = "+est+",emailusuario ='"+em+"'" +
+                " WHERE idusuario = "+idUsu+";");
         Window owner = editNombre.getScene().getWindow();
         VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
                 "Registro Usuarios","Haz editado exitosamente un usario:"+ nom);
@@ -73,34 +78,42 @@ public class EditarUsuariosControl {
             cedCon = rs.getInt(3) ;
             dirCon = rs.getString(4);
             telCon = rs.getInt(5) ;
-            feInCon = rs.getDate(6) ;
+            feInCon = rs.getDate(6).toString() ;
             emCon = rs.getString(10);
             contCon = rs.getString(11);
             sedeCon = rs.getString(7);
             rolCon = rs.getString(8);
             estCon = rs.getBoolean(9);
         }
+        System.out.println(nomCon+"  "+cedCon+"  "+dirCon+"  "+telCon +"  "+feInCon +"  "+emCon
+                +"  "+ contCon +"  "+ sedeCon+"  "+rolCon+"   " +estCon );
         setValues();
     }
 
     private void setValues(){
+        clear();
         editNombre.setText(nomCon); ;
         editCedula.setText(String.valueOf(cedCon)) ;
         editDireccion.setText(dirCon) ;
         editTelefono.setText(String.valueOf(telCon)) ;
-        //editFecha.setValue();
         editEmail.setText(emCon);
-        editContrasena.setText(contCon);
-        //editSedes.setValue();
-        //editRoles.getValue().toString();
-        //editEstado.getValue().toString();
+       // editContrasena.setText(contCon);  encriptada
+        editSedes.setValue(sedeCon);
+        editRoles.setValue(rolCon);
+        if(estCon){
+            editEstado.setValue("Activo");
+        }else{
+            editEstado.setValue("Inactivo");
+        }
+        editFecha.setText(feInCon);
+
+
     }
     private void getValues(){
         nom = editNombre.getText(); ;
         ced = editCedula.getText() ;
         dir = editDireccion.getText() ;
         tel = editTelefono.getText() ;
-        feIn = editFecha.getValue().toString() ;
         em = editEmail.getText();
         cont = editContrasena.getText();
         sede = editSedes.getValue().toString();
@@ -113,9 +126,9 @@ public class EditarUsuariosControl {
         editCedula.clear();
         editDireccion.clear();
         editTelefono.clear();
-        editContrasena.clear();
+       // editContrasena.clear();
         editEmail.clear();
-        editFecha.setValue(null);
+        //editFecha.setValue(null);
     }
 
 
