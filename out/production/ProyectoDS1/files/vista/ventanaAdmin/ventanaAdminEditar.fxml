@@ -75,12 +75,11 @@
                      </items>
                   </ChoiceBox>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <ChoiceBox fx:id="editEstado" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Admin">
+                  <ChoiceBox fx:id="editEstado" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Activo">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
-                           <String fx:value="Admin" />
-                           <String fx:value="Gerente" />
-                           <String fx:value="Obrero" />
+                           <String fx:value="Activo" />
+                           <String fx:value="No Activo" />
                         </FXCollections>
                      </items>
                   </ChoiceBox>

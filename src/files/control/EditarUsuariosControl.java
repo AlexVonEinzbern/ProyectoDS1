@@ -50,13 +50,15 @@ public class EditarUsuariosControl {
     String sedeCon =null;
     String rolCon =null;
     boolean estCon ;
+    int idUsu ;
 
     @FXML   void editUsuario(ActionEvent event) throws SQLException {
         getValues();
-        int in = con.guardar("INSERT INTO usuarios (nombreusuario, cedulausuario, direccionusuario, telefonousuario," +
-                "                fechaingresousuario, sucursalusuario, rolusuario, password,estadousuario,emailusuario)" +
-                "                VALUES('"+nom+"', "+ced+", '"+dir+"', "+tel+"," +
-                "               '"+feIn+"', '"+sede+"', '"+rol+"', '"+cont+"',"+est+",'"+em+"');");
+        // no funciona bien CORREGIR estado no es boolean
+        int in = con.guardar("UPDATE usuarios  SET nombreusuario = '"+nom+"', cedulausuario = "+ced+"," +
+                " direccionusuario = '"+dir+"', telefonousuario = "+tel+",sucursalusuario = '"+ sede+"'," +
+                " rolusuario "+rol+", password '"+cont+"' ,estadousuario = "+est+",emailusuario ='"+em+"'" +
+                " WHERE idUsuario = ");
         Window owner = editNombre.getScene().getWindow();
         VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
                 "Registro Usuarios","Haz editado exitosamente un usario:"+ nom);
@@ -64,7 +66,7 @@ public class EditarUsuariosControl {
     }
 
     @FXML   void busquedaUsuario(ActionEvent event) throws SQLException {
-        int idUsu =  Integer.parseInt(idUsuario.getText());
+         idUsu =  Integer.parseInt(idUsuario.getText());
         ResultSet rs = con.consultar("Select * from usuarios where idusuario = "+idUsu);
         while (rs.next()){
             nomCon = rs.getString(2);
@@ -78,17 +80,17 @@ public class EditarUsuariosControl {
             rolCon = rs.getString(8);
             estCon = rs.getBoolean(9);
         }
-
+        setValues();
     }
 
     private void setValues(){
-        editNombre.setText(""); ;
-        editCedula.setText("") ;
-        editDireccion.setText("") ;
-        editTelefono.setText("") ;
+        editNombre.setText(nomCon); ;
+        editCedula.setText(String.valueOf(cedCon)) ;
+        editDireccion.setText(dirCon) ;
+        editTelefono.setText(String.valueOf(telCon)) ;
         //editFecha.setValue();
-        editEmail.setText("");
-        editContrasena.setText("");
+        editEmail.setText(emCon);
+        editContrasena.setText(contCon);
         //editSedes.setValue();
         //editRoles.getValue().toString();
         //editEstado.getValue().toString();

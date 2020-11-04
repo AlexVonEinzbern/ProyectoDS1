@@ -39,7 +39,8 @@ public class AdminControl {
         editUserBar.setVisible(false);
         statusUserBar.setVisible(false);
         reportBar.setVisible(false);
-
+        editBton.setDisable(false);
+        statBton.setDisable(false);
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdmin.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
@@ -56,13 +57,14 @@ public class AdminControl {
         editUserBar.setVisible(true);
         statusUserBar.setVisible(false);
         reportBar.setVisible(false);
-
+        addBton.setDisable(false);
+        statBton.setDisable(false);
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEditar.fxml"));
         EditarUsuariosControl controller = new EditarUsuariosControl(con);
         loader.setController(controller);
         panelEditar = loader.load();
-        addBton.setDisable(true);
+        editBton.setDisable(true);
         //this.btAnadir.getScene().setRoot(root);
         panelPrincipal.getChildren().removeAll(panelStatus,panelAnadir);
         panelPrincipal.getChildren().add(panelEditar) ;
@@ -72,13 +74,14 @@ public class AdminControl {
         editUserBar.setVisible(false);
         statusUserBar.setVisible(true);
         reportBar.setVisible(false);
-
+        editBton.setDisable(false);
+        addBton.setDisable(false);
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEstado.fxml"));
         EstadoUsuariosControl controller = new EstadoUsuariosControl(con);
         loader.setController(controller);
         panelStatus = loader.load();
-        addBton.setDisable(true);
+        statBton.setDisable(true);
         //this.btAnadir.getScene().setRoot(root);
         panelPrincipal.getChildren().removeAll(panelEditar,panelAnadir);
         panelPrincipal.getChildren().add(panelStatus) ;
