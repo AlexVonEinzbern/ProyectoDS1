@@ -88,7 +88,8 @@ public class LoginControl {
         }
       //  System.out.println(usser);
         ResultSet rs = con.consultar
-                ("Select * from usuarios where emailUsuario = '"+usser+"';");
+                ("Select * from usuarios where emailUsuario = '"+usser+"' and " +
+                        "password = '"+password+"'  and  estadousuario = true;");
 
         String usserbase = null;
         String passwordbase = null;
@@ -103,14 +104,10 @@ public class LoginControl {
              rol = rs.getString("rolusuario");
              nombre = rs.getString("nombreusuario");
         }
-        if(usserbase ==null){
-            VentanaAvisos.showAlert(Alert.AlertType.ERROR,owner,
-                    "Error","El usuario ingresado no esta registrado en el sistema");
-            return;
-        }
+
           // System.out.println(usserbase +"  "+ passwordbase +"  " + activo +"   "+ rol );
            // System.out.println(passwordbase.equals(password) +"  "+ usserbase==usser +"   "+ activo);
-        if(passwordbase.equals(password)  && activo){
+        if(usserbase != null){
             switch(rol){
                 case "Admin":
                     //Ventana ventana = new Ventana(con,"../vista/ventanaAdmin.fxml",rol );
@@ -165,9 +162,9 @@ public class LoginControl {
                     break;
             }
          }else {
-             VentanaAvisos.showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
-                     "Usuario o contraseña incorrectos por favor verifique la informacion");
-             return;
+            VentanaAvisos.showAlert(Alert.AlertType.ERROR,owner,
+                    "Error","El usuario ingresado no esta registrado en el sistema");
+            return;
          }
 
     }
