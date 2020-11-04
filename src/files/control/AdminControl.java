@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Line;
 
 import java.io.IOException;
 
@@ -24,10 +25,20 @@ public class AdminControl {
     @FXML    private Button statBton;
     @FXML    private AnchorPane panelPrincipal;
     @FXML    private AnchorPane panelFondo;
+    @FXML    private Line addUserBar;
+    @FXML    private Line editUserBar;
+    @FXML    private Line statusUserBar;
+    @FXML    private Line reportBar;
+
 
 
 
     @FXML    void addUsuario(ActionEvent event) throws IOException {
+
+        addUserBar.setVisible(true);
+        editUserBar.setVisible(false);
+        statusUserBar.setVisible(false);
+        reportBar.setVisible(false);
 
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdmin.fxml"));
@@ -41,6 +52,11 @@ public class AdminControl {
     }
 
     @FXML    void editUsser(ActionEvent event) throws IOException {
+        addUserBar.setVisible(false);
+        editUserBar.setVisible(true);
+        statusUserBar.setVisible(false);
+        reportBar.setVisible(false);
+
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEditar.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
@@ -52,6 +68,11 @@ public class AdminControl {
         panelPrincipal.getChildren().add(panelEditar) ;
     }
     @FXML    void showStatus(ActionEvent event) throws IOException {
+        addUserBar.setVisible(false);
+        editUserBar.setVisible(false);
+        statusUserBar.setVisible(true);
+        reportBar.setVisible(false);
+
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEstado.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
