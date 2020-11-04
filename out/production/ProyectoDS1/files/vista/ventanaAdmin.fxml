@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Line?>
@@ -10,27 +9,22 @@
    <children>
       <AnchorPane style="-fx-background-color: #0c162b;" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="906.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+            <HBox layoutX="236.0" prefHeight="50.0" prefWidth="365.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="275.0">
                <children>
-                  <Separator prefWidth="200.0" visible="false" />
-                  <Line endX="540.626220703125" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button fx:id="btAnadir" mnemonicParsing="false" onAction="#addUsuario" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD USER" />
-                  <Line endX="540.626220703125" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT USER" />
-                  <Line endX="540.626220703125" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ACTIVE USER" />
-                  <Line endX="540.626220703125" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="STATUS USER" />
-                  <Line endX="540.626220703125" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Separator prefWidth="200.0" visible="false" />
+                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
-            <Line fx:id="editUserBar" endX="306.5" endY="60.0" layoutX="132.0" layoutY="-12.0" startX="202.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" />
-            <Line fx:id="activeUserBar" endX="306.5" endY="60.0" layoutX="255.0" layoutY="-12.0" startX="202.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" />
-            <Line fx:id="statusUserBAr" endX="306.5" endY="60.0" layoutX="380.0" layoutY="-12.0" startX="202.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" />
+            <Line fx:id="editUserBar" endX="314.5" endY="60.0" layoutX="189.0" layoutY="-15.0" startX="193.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" />
+            <Line fx:id="addUserBar" endX="315.0" endY="60.0" layoutX="66.0" layoutY="-15.0" startX="194.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" />
+            <Line fx:id="statusUserBAr" endX="315.0" endY="60.0" layoutX="310.0" layoutY="-15.0" startX="192.75" startY="60.0" stroke="#14862d" strokeWidth="2.0" />
          </children>
       </AnchorPane>
-      <Line fx:id="addUserBar" endX="306.5" endY="60.0" layoutX="9.0" layoutY="-12.0" startX="202.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" />
       <AnchorPane fx:id="panelPrincipal" layoutX="120.0" layoutY="215.0" prefHeight="449.0" prefWidth="913.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
    </children>
 </AnchorPane>

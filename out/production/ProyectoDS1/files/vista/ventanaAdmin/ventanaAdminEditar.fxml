@@ -1,35 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane style="-fx-background-color: #0c162b;" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="120.0" layoutY="7.0" prefHeight="540.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="906.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+            <VBox prefHeight="520.0" prefWidth="473.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="475.0" AnchorPane.topAnchor="50.0">
                <children>
-                  <Separator prefWidth="200.0" visible="false" />
-                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="btAnadir" mnemonicParsing="false" onAction="#addUsuario" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD USER" />
-                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT USER" />
-                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ACTIVE USER" />
-                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="STATUS USER" />
-                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Separator prefWidth="200.0" visible="false" />
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="editNombre" prefHeight="10.0" promptText="Nombre" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="editDireccion" prefHeight="10.0" promptText="Direccion" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <DatePicker fx:id="Editfecha" prefWidth="386.0" promptText="Fecha de ingreso" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-min-width: 90; -fx-pref-height: 200;" />
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <ChoiceBox fx:id="editRoles" prefHeight="28.0" prefWidth="382.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Norte">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Norte" />
+                           <String fx:value="Sur" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="editEmail" prefHeight="10.0" promptText="Correo electronico" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                </children>
-            </HBox>
-            <Line fx:id="editUserBar" endX="298.0" endY="60.0" layoutX="132.0" layoutY="-12.0" startX="202.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" />
-            <Line fx:id="activeUserBar" endX="293.75" endY="60.0" layoutX="255.0" layoutY="-12.0" startX="202.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
-            <Line fx:id="statusUserBAr" endX="289.25" endY="60.0" layoutX="380.0" layoutY="-12.0" startX="198.75" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
+            </VBox>
+            <VBox layoutX="597.0" layoutY="-19.0" prefHeight="520.0" prefWidth="473.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="475.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="editCedula" prefHeight="10.0" promptText="Documento de identidad" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="editTelefono" prefHeight="10.0" promptText="Telefono" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <ChoiceBox fx:id="editSedes" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Admin">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Admin" />
+                           <String fx:value="Gerente" />
+                           <String fx:value="Obrero" />
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="editEstado" prefHeight="10.0" promptText="Estado" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="editContrasena1" layoutX="10.0" layoutY="283.0" prefHeight="10.0" promptText="Contraseña" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+               </children>
+            </VBox>
+            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="390.0" layoutY="443.0" mnemonicParsing="false" onAction="#addUsuario" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
-      <Line fx:id="addUserBar" endX="302.5" endY="60.0" layoutX="9.0" layoutY="-12.0" startX="202.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
    </children>
 </AnchorPane>

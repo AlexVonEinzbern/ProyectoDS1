@@ -23,12 +23,12 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <TextArea fx:id="estadoDelUsuario" layoutX="10.0" layoutY="54.0" prefHeight="120.0" prefWidth="480.0" promptText="Estado del usuario" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <TextArea fx:id="estadoDelUsuario" layoutX="10.0" layoutY="54.0" prefHeight="120.0" prefWidth="480.0" promptText="Estado del usuario" style="-fx-background-radius: 5 5 5 5;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
                <font>
                   <Font size="17.0" />
                </font>
             </TextArea>
-            <ChoiceBox fx:id="estado" layoutX="22.0" layoutY="228.0" prefHeight="35.0" prefWidth="236.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Norte">
+            <ChoiceBox fx:id="estado" layoutX="22.0" layoutY="228.0" prefHeight="35.0" prefWidth="236.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Norte" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="229.0">
             <items>
                <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Activar" />
