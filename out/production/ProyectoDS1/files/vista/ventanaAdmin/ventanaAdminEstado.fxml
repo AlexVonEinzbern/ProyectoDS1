@@ -28,7 +28,11 @@
                   <Font size="17.0" />
                </font>
             </TextArea>
+<<<<<<< HEAD
             <ChoiceBox fx:id="estado" layoutX="22.0" layoutY="228.0" prefHeight="35.0" prefWidth="236.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Norte" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="229.0">
+=======
+            <ChoiceBox fx:id="estado" layoutX="22.0" layoutY="228.0" prefHeight="35.0" prefWidth="236.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Norte">
+>>>>>>> 94b4c6d3e14cb43e82d23b72f11520aa5f862b50
             <items>
                <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Activar" />

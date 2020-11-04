@@ -90,7 +90,7 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                </children>
             </VBox>
-            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="390.0" layoutY="443.0" mnemonicParsing="false" onAction="#addUsuario" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE">
+            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="390.0" layoutY="443.0" mnemonicParsing="false" onAction="#editUsuario" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>

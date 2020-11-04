@@ -12,11 +12,19 @@
             <HBox layoutX="236.0" prefHeight="50.0" prefWidth="365.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="275.0">
                <children>
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+<<<<<<< HEAD
                   <Button fx:id="btAnadir" mnemonicParsing="false" onAction="#addUsuario" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD USER" />
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT USER" />
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="STATUS USER" />
+=======
+                  <Button fx:id="addBton" mnemonicParsing="false" onAction="#addUsuario" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD USER" />
+                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+                  <Button fx:id="editBton" mnemonicParsing="false" onAction="#editUsser" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT USER" />
+                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+                  <Button fx:id="statBton" mnemonicParsing="false" onAction="#showStatus" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="STATUS USER" />
+>>>>>>> 94b4c6d3e14cb43e82d23b72f11520aa5f862b50
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
