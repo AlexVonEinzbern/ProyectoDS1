@@ -9,7 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="540.0" prefWidth="900.0" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
          <children>
@@ -18,7 +20,7 @@
                   <Font size="17.0" />
                </font>
             </TextField>
-            <Button fx:id="buscar" layoutX="427.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: #14862d #14862d; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <Button fx:id="buscar" onAction="#buscarr" layoutX="427.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: #14862d #14862d; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                <font>
                   <Font size="17.0" />
                </font>
@@ -36,7 +38,7 @@
                </FXCollections>
             </items>
             </ChoiceBox>
-            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="380.0" layoutY="229.0" mnemonicParsing="false" onAction="#addUsuario" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="229.0">
+            <Button fx:id="registrar" onAction="#anadir" alignment="CENTER" contentDisplay="CENTER" layoutX="380.0" layoutY="229.0" mnemonicParsing="false"  prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="229.0">
                <font>
                   <Font size="17.0" />
                </font>

@@ -59,7 +59,7 @@ public class AdminControl {
 
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEditar.fxml"));
-        FormUsuariosControl controller = new FormUsuariosControl(con);
+        EditarUsuariosControl controller = new EditarUsuariosControl(con);
         loader.setController(controller);
         panelEditar = loader.load();
         addBton.setDisable(true);
@@ -75,7 +75,7 @@ public class AdminControl {
 
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEstado.fxml"));
-        FormUsuariosControl controller = new FormUsuariosControl(con);
+        EstadoUsuariosControl controller = new EstadoUsuariosControl(con);
         loader.setController(controller);
         panelStatus = loader.load();
         addBton.setDisable(true);
