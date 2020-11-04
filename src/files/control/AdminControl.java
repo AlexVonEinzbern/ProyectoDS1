@@ -23,9 +23,13 @@ public class AdminControl {
     @FXML    private Button editBton;
     @FXML    private Button statBton;
     @FXML    private AnchorPane panelPrincipal;
+    @FXML    private AnchorPane panelFondo;
+
 
 
     @FXML    void addUsuario(ActionEvent event) throws IOException {
+
+        panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdmin.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
         loader.setController(controller);
@@ -37,6 +41,7 @@ public class AdminControl {
     }
 
     @FXML    void editUsser(ActionEvent event) throws IOException {
+        panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEditar.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
         loader.setController(controller);
@@ -47,6 +52,7 @@ public class AdminControl {
         panelPrincipal.getChildren().add(panelEditar) ;
     }
     @FXML    void showStatus(ActionEvent event) throws IOException {
+        panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEstado.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
         loader.setController(controller);
