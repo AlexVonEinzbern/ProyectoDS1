@@ -31,7 +31,7 @@ public class EditarUsuariosControl {
     @FXML   private TextField editContrasena;
     @FXML   private TextField idUsuario;
     @FXML   private Button registrar;
-    String nom = null; ;
+    String nom = null;
     String ced = null ;
     String dir = null;
     String tel = null ;
@@ -85,14 +85,14 @@ public class EditarUsuariosControl {
             rolCon = rs.getString(8);
             estCon = rs.getBoolean(9);
         }
-        System.out.println(nomCon+"  "+cedCon+"  "+dirCon+"  "+telCon +"  "+feInCon +"  "+emCon
-                +"  "+ contCon +"  "+ sedeCon+"  "+rolCon+"   " +estCon );
+       // System.out.println(nomCon+"  "+cedCon+"  "+dirCon+"  "+telCon +"  "+feInCon +"  "+emCon
+      //          +"  "+ contCon +"  "+ sedeCon+"  "+rolCon+"   " +estCon );
         setValues();
     }
 
     private void setValues(){
         clear();
-        editNombre.setText(nomCon); ;
+        editNombre.setText(nomCon);
         editCedula.setText(String.valueOf(cedCon)) ;
         editDireccion.setText(dirCon) ;
         editTelefono.setText(String.valueOf(telCon)) ;
@@ -110,15 +110,15 @@ public class EditarUsuariosControl {
 
     }
     private void getValues(){
-        nom = editNombre.getText(); ;
+        nom = editNombre.getText();
         ced = editCedula.getText() ;
         dir = editDireccion.getText() ;
         tel = editTelefono.getText() ;
         em = editEmail.getText();
         cont = editContrasena.getText();
-        sede = editSedes.getValue().toString();
-        rol = editRoles.getValue().toString();
-        est = editEstado.getValue().toString();
+        sede = editSedes.getValue();
+        rol = editRoles.getValue();
+        est = editEstado.getValue();
     }
 
     private void clear(){
