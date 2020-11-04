@@ -13,20 +13,20 @@ import javafx.stage.StageStyle;
 
 public class Main extends Application {
     private static ConexionBase con;
-/* login ...
+/*
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("vista/ventanaLogin.fxml"));
-        LoginControl controller = new LoginControl(con=new ConexionBase());
+        LoginControl controller = new LoginControl(con = new ConexionBase());
         loader.setController(controller);
         Parent root = loader.load();
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
         primaryStage.show();
-    }*/
-    // admin
+
+    */    // admin
     @Override
     public void start(Stage primaryStage) throws Exception{
       //  primaryStage.initStyle(StageStyle.TRANSPARENT);
@@ -45,4 +45,6 @@ public class Main extends Application {
         launch(args);
         con.cerrar();
     }
-}
+
+
+    }

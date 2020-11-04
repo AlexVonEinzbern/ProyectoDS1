@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
          <children>
@@ -24,8 +24,7 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <ChoiceBox fx:id="estado"  layoutX="22.0" layoutY="228.0" prefHeight="35.0" prefWidth="236.0"
-                       style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Activar" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="229.0">
+            <ChoiceBox fx:id="estado" layoutX="22.0" layoutY="228.0" prefHeight="35.0" prefWidth="236.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Activar" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="229.0">
             <items>
                <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Activar" />
@@ -38,11 +37,11 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <TableView fx:id="tabla" layoutX="14.0" layoutY="54.0" prefHeight="153.0" prefWidth="434.0" style="-fx-background-radius: 5 5 5 5;">
+            <TableView fx:id="tabla" layoutX="14.0" layoutY="54.0" prefHeight="153.0" prefWidth="434.0" style="-fx-background-radius: 5 5 5 5;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
               <columns>
                 <TableColumn fx:id="nombreTabla" prefWidth="235.0" style="-fx-background-color: #14862d;" text="Nombre" />
                 <TableColumn fx:id="estadoTabla" minWidth="2.0" prefWidth="108.0" style="-fx-background-color: #14862d;" text="Estado" />
-                  <TableColumn fx:id="rolTabla" prefWidth="90.0" style="-fx-background-color: #14862d;" text="Rol" />
+                  <TableColumn fx:id="rolTabla" prefWidth="135.0" style="-fx-background-color: #14862d;" text="Rol" />
               </columns>
             </TableView>
          </children>
