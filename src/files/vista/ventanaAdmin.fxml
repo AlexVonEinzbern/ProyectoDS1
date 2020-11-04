@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane style="-fx-background-color: #0c162b;" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -49,12 +49,17 @@
       </AnchorPane>
       <AnchorPane fx:id="panelPrincipal" layoutX="120.0" layoutY="215.0" prefHeight="449.0" prefWidth="913.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
-            <ImageView fitHeight="432.0" fitWidth="661.0" layoutX="46.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="10.0">
-               <image>
-                  <Image url="@../../images/electricista.jpg" />
-               </image>
-            </ImageView>
-            <AnchorPane layoutX="14.0" layoutY="48.0" opacity="0.6" prefHeight="432.0" prefWidth="233.0" style="-fx-background-color: #14862d;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" />
-         </children></AnchorPane>
+            <AnchorPane fx:id="panelFondo" layoutX="10.0" layoutY="48.0">
+               <children>
+                  <ImageView fitHeight="432.0" fitWidth="661.0" layoutX="232.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/electricista.jpg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane opacity="0.6" prefHeight="432.0" prefWidth="233.0" style="-fx-background-color: #14862d;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

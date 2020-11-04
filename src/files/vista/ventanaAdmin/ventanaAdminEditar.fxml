@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" style="-fx-background-color: TRANSPARENT;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="120.0" layoutY="7.0" prefHeight="540.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+      <AnchorPane layoutX="120.0" layoutY="7.0" prefHeight="540.0" prefWidth="900.0" style="-fx-background-color: red;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
          <children>
             <VBox prefHeight="520.0" prefWidth="473.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="475.0" AnchorPane.topAnchor="50.0">
                <children>
@@ -32,7 +32,7 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                   <DatePicker fx:id="Editfecha" editable="false" prefWidth="386.0" promptText="Fecha de ingreso" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-min-width: 90; -fx-pref-height: 200;" />
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <ChoiceBox fx:id="editRoles" prefHeight="28.0" prefWidth="382.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Norte">
+                  <ChoiceBox fx:id="editRoles" prefHeight="28.0" prefWidth="382.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Norte">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
                            <String fx:value="Norte" />
@@ -65,7 +65,7 @@
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <ChoiceBox fx:id="editSedes" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Admin">
+                  <ChoiceBox fx:id="editSedes" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: white; -fx-min-height: 35;" value="Admin">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
                            <String fx:value="Admin" />
