@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="120.0" layoutY="7.0" prefHeight="540.0" prefWidth="900.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
          <children>
@@ -93,19 +93,19 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                </children>
             </VBox>
-            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="390.0" layoutY="443.0" mnemonicParsing="false" onAction="#editUsuario" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE">
+            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="390.0" layoutY="443.0" mnemonicParsing="false" onAction="#editUsuario" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="buscar" layoutX="409.0" layoutY="20.0" mnemonicParsing="false" onAction="#busquedaUsuario" style="-fx-background-color: #14862d #14862d; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
+            <Button fx:id="buscar" layoutX="390.0" layoutY="20.0" mnemonicParsing="false" onAction="#busquedaUsuario" prefWidth="120.0" style="-fx-background-color: #14862d #14862d; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <TextField fx:id="idUsuario" layoutX="61.0" layoutY="28.0" prefHeight="26.0" prefWidth="327.0" promptText="ID de usuario" style="-fx-border-radius: 5 5 5 5;">
+      <TextField fx:id="idUsuario" layoutX="61.0" layoutY="28.0" prefHeight="26.0" prefWidth="327.0" promptText="ID de usuario" style="-fx-border-radius: 5 5 5 5;" AnchorPane.leftAnchor="50.0">
          <font>
             <Font size="17.0" />
          </font>
