@@ -1,4 +1,4 @@
-package files.control;
+package files.control.admin;
 
 import files.modelo.ConexionBase;
 import files.modelo.VentanaAvisos;
@@ -7,10 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Window;
 
-import java.sql.Date;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
+
 
 public class EditarUsuariosControl {
     private ConexionBase con;
@@ -35,7 +35,6 @@ public class EditarUsuariosControl {
     String ced = null ;
     String dir = null;
     String tel = null ;
-    String feIn = null ;
     String em = null;
     String cont = null;
     String sede = null;
@@ -60,7 +59,7 @@ public class EditarUsuariosControl {
         }else{
             est="false";
         }
-        int in = con.guardar("UPDATE usuarios  SET nombreusuario = '"+nom+"', cedulausuario = "+ced+"," +
+       con.guardar("UPDATE usuarios  SET nombreusuario = '"+nom+"', cedulausuario = "+ced+"," +
                 " direccionusuario = '"+dir+"', telefonousuario = "+tel+",sucursalusuario = '"+ sede+"'," +
                 " rolusuario = '"+rol+"' , password = '"+cont+"' ,estadousuario = "+est+",emailusuario ='"+em+"'" +
                 " WHERE idusuario = "+idUsu+";");

@@ -1,15 +1,12 @@
 package files;
 
-import files.control.AdminControl;
-import files.control.LoginControl;
+import files.control.admin.AdminControl;
 import files.modelo.ConexionBase;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class Main extends Application {
     private static ConexionBase con;

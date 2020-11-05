@@ -1,4 +1,7 @@
 package files.control;
+import files.control.admin.AdminControl;
+import files.control.getente.GerenteControl;
+import files.control.obrero.ObreroControl;
 import files.modelo.VentanaAvisos;
 import files.modelo.ConexionBase;
 import javafx.application.Platform;

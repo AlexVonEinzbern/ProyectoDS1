@@ -1,4 +1,4 @@
-package files.control;
+package files.control.admin;
 
 import files.modelo.ConexionBase;
 import files.modelo.Usuario;
@@ -6,16 +6,10 @@ import files.modelo.VentanaAvisos;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import javafx.stage.Window;
 
 
-import java.sql.Connection;
-import java.sql.Date;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class FormUsuariosControl {
     private Usuario nuevo;

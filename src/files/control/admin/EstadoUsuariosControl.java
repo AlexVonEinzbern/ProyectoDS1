@@ -1,14 +1,14 @@
-package files.control;
+package files.control.admin;
 
 import files.modelo.ConexionBase;
 import files.modelo.VentanaAvisos;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Window;
 
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -73,5 +73,4 @@ public class EstadoUsuariosControl {
         idUsuario.clear();
     }
 }
-
 //-fx-background-color    #14862d #14862d   -fx-font-style

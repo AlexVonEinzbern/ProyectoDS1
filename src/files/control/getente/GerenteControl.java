@@ -1,8 +1,6 @@
-package files.control;
+package files.control.getente;
 
 import files.modelo.ConexionBase;
-
-import java.sql.Connection;
 
 public class GerenteControl {
     private ConexionBase con;
