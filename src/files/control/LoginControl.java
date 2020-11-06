@@ -122,6 +122,7 @@ public class LoginControl {
                     Stage ventana = new Stage();
                     ventana.setScene(scene);
                     ventana.setTitle("Admin");
+                    ventana.setResizable(false);
                     ventana.show();
                     owner = ventana.getScene().getWindow();
                     VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,

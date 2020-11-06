@@ -32,6 +32,8 @@
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button fx:id="statBton" mnemonicParsing="false" onAction="#showStatus" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="STATUS USER" />
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+                  <Button fx:id="allBton" mnemonicParsing="false" onAction="#showUssers" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="All USSER" />
+                  <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button fx:id="reports" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="REPORTS" />
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
@@ -41,10 +43,11 @@
                   <Image url="@../../images/ajustes.png" />
                </image>
             </ImageView>
-            <Line fx:id="editUserBar" endX="314.5" endY="60.0" layoutX="189.0" layoutY="-15.0" startX="193.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
-            <Line fx:id="addUserBar" endX="315.0" endY="60.0" layoutX="66.0" layoutY="-15.0" startX="194.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
-            <Line fx:id="statusUserBar" endX="315.0" endY="60.0" layoutX="310.0" layoutY="-15.0" startX="192.75" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
-            <Line fx:id="reportBar" endX="315.0" endY="60.0" layoutX="430.0" layoutY="-15.0" startX="192.75" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
+            <Line fx:id="editUserBar" endX="268.0" endY="60.0" layoutX="189.0" layoutY="-15.0" startX="170.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
+            <Line fx:id="addUserBar" endX="293.0" endY="60.0" layoutX="66.0" layoutY="-15.0" startX="194.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
+            <Line fx:id="statusUserBar" endX="245.0" endY="60.0" layoutX="310.0" layoutY="-15.0" startX="147.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
+            <Line fx:id="reportBar" endX="223.0" endY="60.0" layoutX="430.0" layoutY="-15.0" startX="321.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
+            <Line fx:id="allBar" endX="212.0" endY="49.0" layoutX="440.0" layoutY="-5.0" startX="116.0" startY="50.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="panelPrincipal" layoutX="120.0" layoutY="215.0" prefHeight="449.0" prefWidth="913.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">

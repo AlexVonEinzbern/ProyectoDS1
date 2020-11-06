@@ -34,7 +34,7 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                   <DatePicker fx:id="fecha" prefWidth="386.0" promptText="Fecha de ingreso" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-min-width: 90; -fx-pref-height: 200;" />
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <ChoiceBox fx:id="roles" prefHeight="28.0" prefWidth="382.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Norte">
+                  <ChoiceBox fx:id="sedes" prefHeight="28.0" prefWidth="382.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Norte">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
                            <String fx:value="Norte" />
@@ -67,7 +67,7 @@
                      </font>
                   </TextField>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
-                  <ChoiceBox fx:id="sedes" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Admin">
+                  <ChoiceBox fx:id="roles" prefHeight="35.0" prefWidth="375.0" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-background-color: transparent; -fx-min-height: 35;" value="Admin">
                      <items>
                         <FXCollections fx:factory="observableArrayList">
                            <String fx:value="Admin" />

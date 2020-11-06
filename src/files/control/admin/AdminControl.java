@@ -8,13 +8,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Line;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class AdminControl {
     private ConexionBase con;
     private AnchorPane panelAnadir;
     private AnchorPane panelEditar;
     private AnchorPane panelStatus;
-    public AdminControl(ConexionBase con){
+    private AnchorPane panelUsuarios;
+    public AdminControl(ConexionBase con) throws IOException {
         this.con = con;
     }
 
@@ -27,6 +29,7 @@ public class AdminControl {
     @FXML    private Line editUserBar;
     @FXML    private Line statusUserBar;
     @FXML    private Line reportBar;
+    @FXML    private Button allBton;
 
 
 
@@ -40,13 +43,13 @@ public class AdminControl {
         editBton.setDisable(false);
         statBton.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdmin.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/ventanaAdmin.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
         loader.setController(controller);
         panelAnadir = loader.load();
         addBton.setDisable(true);
         //this.btAnadir.getScene().setRoot(root);
-        panelPrincipal.getChildren().removeAll(panelEditar,panelStatus);
+        panelPrincipal.getChildren().removeAll(panelEditar,panelStatus,panelUsuarios);
         panelPrincipal.getChildren().add(panelAnadir); ;
     }
 
@@ -58,13 +61,13 @@ public class AdminControl {
         addBton.setDisable(false);
         statBton.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEditar.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/ventanaAdminEditar.fxml"));
         EditarUsuariosControl controller = new EditarUsuariosControl(con);
         loader.setController(controller);
         panelEditar = loader.load();
         editBton.setDisable(true);
         //this.btAnadir.getScene().setRoot(root);
-        panelPrincipal.getChildren().removeAll(panelStatus,panelAnadir);
+        panelPrincipal.getChildren().removeAll(panelStatus,panelAnadir,panelUsuarios);
         panelPrincipal.getChildren().add(panelEditar) ;
     }
     @FXML    void showStatus(ActionEvent event) throws IOException {
@@ -75,13 +78,35 @@ public class AdminControl {
         editBton.setDisable(false);
         addBton.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin/ventanaAdminEstado.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/ventanaAdminEstado.fxml"));
         EstadoUsuariosControl controller = new EstadoUsuariosControl(con);
         loader.setController(controller);
         panelStatus = loader.load();
         statBton.setDisable(true);
         //this.btAnadir.getScene().setRoot(root);
-        panelPrincipal.getChildren().removeAll(panelEditar,panelAnadir);
+        panelPrincipal.getChildren().removeAll(panelEditar,panelAnadir,panelUsuarios);
         panelPrincipal.getChildren().add(panelStatus) ;
     }
+
+    @FXML
+    void showUssers(ActionEvent event) throws IOException, SQLException {
+
+        addUserBar.setVisible(false);
+        editUserBar.setVisible(false);
+        statusUserBar.setVisible(false);
+        reportBar.setVisible(false);
+        editBton.setDisable(false);
+        addBton.setDisable(false);
+        statBton.setDisable(false);
+        panelFondo.setVisible(false);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/PanelUsuarios.fxml"));
+        ListaUsuariosControl controller = new ListaUsuariosControl(con);
+        loader.setController(controller);
+        panelUsuarios = loader.load();
+        allBton.setDisable(true);
+        //this.btAnadir.getScene().setRoot(root);
+        panelPrincipal.getChildren().removeAll(panelEditar,panelAnadir,panelStatus);
+        panelPrincipal.getChildren().add(panelUsuarios) ;
+    }
+
 }
