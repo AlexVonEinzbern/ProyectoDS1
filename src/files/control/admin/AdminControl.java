@@ -3,14 +3,18 @@ import files.modelo.ConexionBase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.shape.Line;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class AdminControl {
+public class AdminControl implements Initializable {
     private ConexionBase con;
     private AnchorPane panelAnadir;
     private AnchorPane panelEditar;
@@ -18,19 +22,26 @@ public class AdminControl {
     private AnchorPane panelUsuarios;
     public AdminControl(ConexionBase con) throws IOException {
         this.con = con;
-    }
+         }
 
     @FXML    private Button addBton;
     @FXML    private Button editBton;
     @FXML    private Button statBton;
+    @FXML    private Button allBton;
     @FXML    private AnchorPane panelPrincipal;
     @FXML    private AnchorPane panelFondo;
     @FXML    private Line addUserBar;
     @FXML    private Line editUserBar;
     @FXML    private Line statusUserBar;
     @FXML    private Line reportBar;
-    @FXML    private Button allBton;
-
+    @FXML    private HBox panelFuncionesUsuario;
+    @FXML    private HBox panelFuncionesActivos;
+    @FXML    private Button addBtonActivos;
+    @FXML    private Button editBtonActivos;
+    @FXML    private Button statBtonActivos;
+    @FXML    private Button allBtonActivos;
+    @FXML    private Button activosBton;
+    @FXML    private Button usuarioBton;
 
 
 
@@ -109,4 +120,47 @@ public class AdminControl {
         panelPrincipal.getChildren().add(panelUsuarios) ;
     }
 
+    @FXML    void accionesActivos(ActionEvent event) {
+        activosBton.setDisable(true);
+        usuarioBton.setDisable(false);
+        panelFuncionesActivos.setVisible(true);
+        panelFuncionesUsuario.setVisible(false);
+    }
+
+    @FXML    void accionesUsuario(ActionEvent event) {
+        activosBton.setDisable(false);
+        usuarioBton.setDisable(true);
+        panelFuncionesActivos.setVisible(false);
+        panelFuncionesUsuario.setVisible(true);
+    }
+    @FXML    void addActivos(ActionEvent event) {
+
+    }
+
+   @FXML
+    void editActivos(ActionEvent event) {
+
+    }
+
+
+
+    @FXML
+    void showActivos(ActionEvent event) {
+
+    }
+
+
+
+
+
+    @FXML
+    void statActivos(ActionEvent event) {
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        panelFuncionesActivos.setVisible(false);
+        panelFuncionesUsuario.setVisible(false);
+    }
 }

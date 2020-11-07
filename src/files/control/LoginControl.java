@@ -53,7 +53,7 @@ public class LoginControl {
         helpArrow.setVisible(false);
     }
 
-    public void BotonHelp(MouseEvent event){
+    public void BsotonHelp(MouseEvent event){
 
         loginPanel.setVisible(false);
         helpPanel.setVisible(true);
