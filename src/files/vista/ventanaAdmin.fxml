@@ -18,6 +18,17 @@
                   <Image url="@../../images/logo.png" />
                </image>
             </ImageView>
+            <HBox fx:id="panelFuncionesActivos" layoutX="260.0" layoutY="30.0" prefHeight="31.0" prefWidth="485.0">
+               <children>
+                  <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+                  <Button fx:id="addBtonActivos" mnemonicParsing="false" onAction="#addActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD" />
+                  <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+                  <Button fx:id="editBtonActivos" mnemonicParsing="false" onAction="#editActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT" />
+                  <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+                  <Button fx:id="allBtonActivos" mnemonicParsing="false" onAction="#showActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ALL" />
+                  <Line endX="540.0" endY="220.4191131591797" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+               </children>
+            </HBox>
             <HBox fx:id="panelFuncionesUsuario" layoutX="260.0" layoutY="28.0" prefHeight="24.0" prefWidth="492.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="28.0">
                <children>
                   <Line endX="539.9191284179688" endY="231.21200561523438" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
@@ -49,19 +60,6 @@
             <Line fx:id="reportBar" endX="223.0" endY="60.0" layoutX="430.0" layoutY="-15.0" startX="321.0" startY="60.0" stroke="#14862d" strokeWidth="2.0" visible="false" />
             <Button fx:id="usuarioBton" layoutX="254.0" layoutY="-2.0" mnemonicParsing="false" onAction="#accionesUsuario" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: white;" text="Ussers" />
             <Button fx:id="activosBton" layoutX="365.0" layoutY="-2.0" mnemonicParsing="false" onAction="#accionesActivos" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: white;" text="Actives" />
-            <HBox fx:id="panelFuncionesActivos" layoutX="260.0" layoutY="30.0" prefHeight="31.0" prefWidth="485.0">
-               <children>
-                  <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="addBtonActivos" mnemonicParsing="false" onAction="#addActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD" />
-                  <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="editBtonActivos" mnemonicParsing="false" onAction="#editActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT" />
-                  <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="statBtonActivos" mnemonicParsing="false" onAction="#statActivos" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="STATUS" />
-                  <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="allBtonActivos" mnemonicParsing="false" onAction="#showActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ALL" />
-                  <Line endX="540.0" endY="220.4191131591797" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-               </children>
-            </HBox>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="panelPrincipal" layoutX="120.0" layoutY="215.0" prefHeight="449.0" prefWidth="913.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">

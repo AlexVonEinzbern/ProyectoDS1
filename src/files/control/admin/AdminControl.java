@@ -1,4 +1,8 @@
 package files.control.admin;
+import files.control.admin.usuarios.EditarUsuariosControl;
+import files.control.admin.usuarios.EstadoUsuariosControl;
+import files.control.admin.usuarios.FormUsuariosControl;
+import files.control.admin.usuarios.ListaUsuariosControl;
 import files.modelo.ConexionBase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +24,9 @@ public class AdminControl implements Initializable {
     private AnchorPane panelEditar;
     private AnchorPane panelStatus;
     private AnchorPane panelUsuarios;
+    private AnchorPane panelAnadirActivos;
+    private AnchorPane panelEditarActivos;
+    private AnchorPane panelAllActivos;
     public AdminControl(ConexionBase con) throws IOException {
         this.con = con;
          }
@@ -38,7 +45,6 @@ public class AdminControl implements Initializable {
     @FXML    private HBox panelFuncionesActivos;
     @FXML    private Button addBtonActivos;
     @FXML    private Button editBtonActivos;
-    @FXML    private Button statBtonActivos;
     @FXML    private Button allBtonActivos;
     @FXML    private Button activosBton;
     @FXML    private Button usuarioBton;
@@ -53,8 +59,9 @@ public class AdminControl implements Initializable {
         reportBar.setVisible(false);
         editBton.setDisable(false);
         statBton.setDisable(false);
+        allBton.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/ventanaAdmin.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/ventanaAdmin.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
         loader.setController(controller);
         panelAnadir = loader.load();
@@ -71,8 +78,9 @@ public class AdminControl implements Initializable {
         reportBar.setVisible(false);
         addBton.setDisable(false);
         statBton.setDisable(false);
+        allBton.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/ventanaAdminEditar.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/ventanaAdminEditar.fxml"));
         EditarUsuariosControl controller = new EditarUsuariosControl(con);
         loader.setController(controller);
         panelEditar = loader.load();
@@ -88,8 +96,9 @@ public class AdminControl implements Initializable {
         reportBar.setVisible(false);
         editBton.setDisable(false);
         addBton.setDisable(false);
+        allBton.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/ventanaAdminEstado.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/ventanaAdminEstado.fxml"));
         EstadoUsuariosControl controller = new EstadoUsuariosControl(con);
         loader.setController(controller);
         panelStatus = loader.load();
@@ -110,7 +119,7 @@ public class AdminControl implements Initializable {
         addBton.setDisable(false);
         statBton.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/PanelUsuarios.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/PanelUsuarios.fxml"));
         ListaUsuariosControl controller = new ListaUsuariosControl(con);
         loader.setController(controller);
         panelUsuarios = loader.load();
@@ -121,15 +130,21 @@ public class AdminControl implements Initializable {
     }
 
     @FXML    void accionesActivos(ActionEvent event) {
+        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
+                panelAllActivos,panelAnadirActivos,panelEditarActivos);
         activosBton.setDisable(true);
         usuarioBton.setDisable(false);
+        enable();
         panelFuncionesActivos.setVisible(true);
         panelFuncionesUsuario.setVisible(false);
     }
 
     @FXML    void accionesUsuario(ActionEvent event) {
+        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
+                panelAllActivos,panelAnadirActivos,panelEditarActivos);
         activosBton.setDisable(false);
         usuarioBton.setDisable(true);
+        enable();
         panelFuncionesActivos.setVisible(false);
         panelFuncionesUsuario.setVisible(true);
     }
@@ -150,17 +165,19 @@ public class AdminControl implements Initializable {
     }
 
 
-
-
-
-    @FXML
-    void statActivos(ActionEvent event) {
-
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         panelFuncionesActivos.setVisible(false);
         panelFuncionesUsuario.setVisible(false);
     }
+
+    public void enable(){
+        addBton.setDisable(false);
+        editBton.setDisable(false);
+        statBton.setDisable(false);
+        allBton.setDisable(false);
+        addBtonActivos.setDisable(false);
+        editBtonActivos.setDisable(false);
+        allBtonActivos.setDisable(false);
+        }
 }

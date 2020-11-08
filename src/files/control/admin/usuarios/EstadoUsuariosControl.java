@@ -1,4 +1,4 @@
-package files.control.admin;
+package files.control.admin.usuarios;
 
 import files.modelo.ConexionBase;
 import files.modelo.VentanaAvisos;
