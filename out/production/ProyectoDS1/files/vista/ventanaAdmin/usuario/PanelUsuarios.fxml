@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tablaUsuarios" layoutX="74.0" layoutY="37.0" prefHeight="467.0" prefWidth="752.0">
+        <columns>
+          <TableColumn fx:id="nombreUsuario" prefWidth="348.0" text="Nombre" />
+          <TableColumn fx:id="estadoUsuario" minWidth="0.0" prefWidth="250.0" text="Estado" />
+            <TableColumn fx:id="rolUsuario" prefWidth="153.0" text="Rol" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
