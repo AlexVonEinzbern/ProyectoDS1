@@ -36,12 +36,12 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <Label layoutX="309.0" layoutY="71.0" text="Estado" textFill="#96ae9b" />
-            <TextField fx:id="nombreUsuario" editable="false" layoutX="26.0" layoutY="87.0" prefHeight="26.0" prefWidth="170.0" style="-fx-border-color: #14862d;" />
-            <TextField fx:id="rolUsuario" editable="false" layoutX="198.0" layoutY="87.0" prefHeight="26.0" prefWidth="110.0" style="-fx-border-color: #14862d;" />
-            <TextField fx:id="estadoUsuario" editable="false" layoutX="309.0" layoutY="87.0" prefHeight="26.0" prefWidth="110.0" style="-fx-border-color: #14862d;" />
-            <Label layoutX="198.0" layoutY="71.0" text="Rol" textFill="#96ae9b" />
-            <Label layoutX="26.0" layoutY="71.0" text="Nombre" textFill="#96ae9b" />
+            <Label layoutX="309.0" layoutY="71.0" text="Estado" textFill="#96ae9b" AnchorPane.leftAnchor="380.0" />
+            <TextField fx:id="nombreUsuario" editable="false" layoutX="12.0" layoutY="87.0" prefHeight="28.0" prefWidth="232.0" style="-fx-border-color: #14862d;" AnchorPane.leftAnchor="10.0" />
+            <TextField fx:id="rolUsuario" editable="false" layoutX="250.0" layoutY="87.0" prefHeight="28.0" prefWidth="120.0" style="-fx-border-color: #14862d;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="127.0" />
+            <TextField fx:id="estadoUsuario" editable="false" layoutX="309.0" layoutY="87.0" prefHeight="26.0" prefWidth="110.0" style="-fx-border-color: #14862d;" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="198.0" layoutY="71.0" text="Rol" textFill="#96ae9b" AnchorPane.leftAnchor="250.0" />
+            <Label layoutX="26.0" layoutY="71.0" text="Nombre" textFill="#96ae9b" AnchorPane.leftAnchor="10.0" />
          </children>
       </AnchorPane>
    </children>
