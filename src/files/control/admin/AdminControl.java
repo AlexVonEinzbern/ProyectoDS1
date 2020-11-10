@@ -1,4 +1,7 @@
 package files.control.admin;
+import files.control.admin.activos.EditarActivosControl;
+import files.control.admin.activos.FormActivosControl;
+import files.control.admin.activos.ListaActivosControl;
 import files.control.admin.usuarios.EditarUsuariosControl;
 import files.control.admin.usuarios.EstadoUsuariosControl;
 import files.control.admin.usuarios.FormUsuariosControl;
@@ -12,7 +15,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
 
 import java.io.IOException;
 import java.net.URL;
@@ -101,8 +103,6 @@ public class AdminControl implements Initializable {
     }
 
     @FXML    void showUssers(ActionEvent event) throws IOException, SQLException {
-
-
         editBton.setDisable(false);
         addBton.setDisable(false);
         statBton.setDisable(false);
@@ -125,7 +125,7 @@ public class AdminControl implements Initializable {
                 panelAllActivos,panelAnadirActivos,panelEditarActivos);
         activosBton.setDisable(true);
         usuarioBton.setDisable(false);
-        enable();
+        disable();
         panelFuncionesActivos.setVisible(true);
         panelFuncionesUsuario.setVisible(false);
     }
@@ -139,21 +139,54 @@ public class AdminControl implements Initializable {
                 panelAllActivos,panelAnadirActivos,panelEditarActivos);
         activosBton.setDisable(false);
         usuarioBton.setDisable(true);
-        enable();
+        disable();
         panelFuncionesActivos.setVisible(false);
         panelFuncionesUsuario.setVisible(true);
     }
 
-    @FXML    void addActivos(ActionEvent event) {
-
+    @FXML    void addActivos(ActionEvent event) throws IOException {
+        editBtonActivos.setDisable(false);
+        allBtonActivos.setDisable(false);
+        panelFondo.setVisible(false);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/activos/addActive.fxml"));
+        FormActivosControl controller = new FormActivosControl(con);
+        loader.setController(controller);
+        panelAnadirActivos = loader.load();
+        addBtonActivos.setDisable(true);
+        //this.btAnadir.getScene().setRoot(root);
+        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
+                panelAllActivos,panelEditarActivos);
+        panelPrincipal.getChildren().add(panelAnadirActivos) ;
     }
 
-    @FXML    void editActivos(ActionEvent event) {
-
+    @FXML    void editActivos(ActionEvent event) throws IOException {
+        addBtonActivos.setDisable(false);
+        allBtonActivos.setDisable(false);
+        panelFondo.setVisible(false);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/activos/editActive.fxml"));
+        EditarActivosControl controller = new EditarActivosControl(con);
+        loader.setController(controller);
+        panelEditarActivos = loader.load();
+        editBtonActivos.setDisable(true);
+        //this.btAnadir.getScene().setRoot(root);
+        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
+                panelAllActivos,panelAnadirActivos);
+        panelPrincipal.getChildren().add(panelEditarActivos);
     }
 
-    @FXML    void showActivos(ActionEvent event) {
-
+    @FXML    void showActivos(ActionEvent event) throws IOException {
+        editBtonActivos.setDisable(false);
+        allBtonActivos.setDisable(false);
+        panelFondo.setVisible(false);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/activos/panelListaActivos.fxml"));
+        ListaActivosControl controller = new ListaActivosControl(con);
+        loader.setController(controller);
+        panelAllActivos = loader.load();
+        allBtonActivos.setDisable(true);
+        //this.btAnadir.getScene().setRoot(root);
+        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
+                panelAnadirActivos,panelEditarActivos);
+        panelPrincipal.getChildren().add(panelAllActivos);
     }
 
     @Override
@@ -162,7 +195,7 @@ public class AdminControl implements Initializable {
         panelFuncionesUsuario.setVisible(false);
     }
 
-    public void enable(){
+    public void disable(){
         addBton.setDisable(false);
         editBton.setDisable(false);
         statBton.setDisable(false);
