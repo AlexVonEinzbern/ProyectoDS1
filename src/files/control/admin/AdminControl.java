@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
 import java.io.IOException;
@@ -27,6 +28,7 @@ public class AdminControl implements Initializable {
     private AnchorPane panelAnadirActivos;
     private AnchorPane panelEditarActivos;
     private AnchorPane panelAllActivos;
+
     public AdminControl(ConexionBase con) throws IOException {
         this.con = con;
          }
@@ -37,10 +39,6 @@ public class AdminControl implements Initializable {
     @FXML    private Button allBton;
     @FXML    private AnchorPane panelPrincipal;
     @FXML    private AnchorPane panelFondo;
-    @FXML    private Line addUserBar;
-    @FXML    private Line editUserBar;
-    @FXML    private Line statusUserBar;
-    @FXML    private Line reportBar;
     @FXML    private HBox panelFuncionesUsuario;
     @FXML    private HBox panelFuncionesActivos;
     @FXML    private Button addBtonActivos;
@@ -48,15 +46,14 @@ public class AdminControl implements Initializable {
     @FXML    private Button allBtonActivos;
     @FXML    private Button activosBton;
     @FXML    private Button usuarioBton;
+    @FXML    private Circle userCircle;
+    @FXML    private Circle activesCircle;
+    @FXML    private AnchorPane bienvenida;
 
 
 
     @FXML    void addUsuario(ActionEvent event) throws IOException {
 
-        addUserBar.setVisible(true);
-        editUserBar.setVisible(false);
-        statusUserBar.setVisible(false);
-        reportBar.setVisible(false);
         editBton.setDisable(false);
         statBton.setDisable(false);
         allBton.setDisable(false);
@@ -72,10 +69,7 @@ public class AdminControl implements Initializable {
     }
 
     @FXML    void editUsser(ActionEvent event) throws IOException {
-        addUserBar.setVisible(false);
-        editUserBar.setVisible(true);
-        statusUserBar.setVisible(false);
-        reportBar.setVisible(false);
+
         addBton.setDisable(false);
         statBton.setDisable(false);
         allBton.setDisable(false);
@@ -89,11 +83,9 @@ public class AdminControl implements Initializable {
         panelPrincipal.getChildren().removeAll(panelStatus,panelAnadir,panelUsuarios);
         panelPrincipal.getChildren().add(panelEditar) ;
     }
+
     @FXML    void showStatus(ActionEvent event) throws IOException {
-        addUserBar.setVisible(false);
-        editUserBar.setVisible(false);
-        statusUserBar.setVisible(true);
-        reportBar.setVisible(false);
+
         editBton.setDisable(false);
         addBton.setDisable(false);
         allBton.setDisable(false);
@@ -108,13 +100,9 @@ public class AdminControl implements Initializable {
         panelPrincipal.getChildren().add(panelStatus) ;
     }
 
-    @FXML
-    void showUssers(ActionEvent event) throws IOException, SQLException {
+    @FXML    void showUssers(ActionEvent event) throws IOException, SQLException {
 
-        addUserBar.setVisible(false);
-        editUserBar.setVisible(false);
-        statusUserBar.setVisible(false);
-        reportBar.setVisible(false);
+
         editBton.setDisable(false);
         addBton.setDisable(false);
         statBton.setDisable(false);
@@ -130,6 +118,9 @@ public class AdminControl implements Initializable {
     }
 
     @FXML    void accionesActivos(ActionEvent event) {
+        bienvenida.setVisible(false);
+        activesCircle.setVisible(true);
+        userCircle.setVisible(false);
         panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
                 panelAllActivos,panelAnadirActivos,panelEditarActivos);
         activosBton.setDisable(true);
@@ -140,6 +131,10 @@ public class AdminControl implements Initializable {
     }
 
     @FXML    void accionesUsuario(ActionEvent event) {
+
+        bienvenida.setVisible(false);
+        activesCircle.setVisible(false);
+        userCircle.setVisible(true);
         panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
                 panelAllActivos,panelAnadirActivos,panelEditarActivos);
         activosBton.setDisable(false);
@@ -148,22 +143,18 @@ public class AdminControl implements Initializable {
         panelFuncionesActivos.setVisible(false);
         panelFuncionesUsuario.setVisible(true);
     }
+
     @FXML    void addActivos(ActionEvent event) {
 
     }
 
-   @FXML
-    void editActivos(ActionEvent event) {
+    @FXML    void editActivos(ActionEvent event) {
 
     }
 
-
-
-    @FXML
-    void showActivos(ActionEvent event) {
+    @FXML    void showActivos(ActionEvent event) {
 
     }
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
