@@ -178,7 +178,7 @@ public class AdminControl implements Initializable {
         editBtonActivos.setDisable(false);
         allBtonActivos.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/activos/panelListaActivos.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/activos/allActive.fxml"));
         ListaActivosControl controller = new ListaActivosControl(con);
         loader.setController(controller);
         panelAllActivos = loader.load();

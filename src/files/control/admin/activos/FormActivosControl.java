@@ -29,7 +29,7 @@ public class FormActivosControl {
         clear();
     }
 
-    @FXML    void addUsuario(ActionEvent event) throws SQLException {
+    @FXML    void addActivo(ActionEvent event) throws SQLException {
         int idAct = Integer.parseInt(idActivo.getText());
         String nom = nombre.getText();
         String dir = direccion.getText() ;
@@ -42,6 +42,7 @@ public class FormActivosControl {
     }
 
     private void clear(){
+        idActivo.clear();
        nombre.clear();
        direccion.clear();
     }

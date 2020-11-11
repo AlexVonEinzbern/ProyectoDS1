@@ -73,7 +73,7 @@ public class ListaActivosControl implements Initializable {
         public void setNombreActivo(String fName) {
             nombreActivo.set(fName);
         }
-        public String getireccionActivo() {
+        public String getDireccionActivo() {
             return direccionActivo.get();
         }
         public void setDireccionActivo(String fName) {

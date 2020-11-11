@@ -28,7 +28,7 @@ public class EditarActivosControl {
     @FXML   private Button registrar;
 
 
-    @FXML   void editUsuario(ActionEvent event) throws SQLException {
+    @FXML   void editActivo(ActionEvent event) throws SQLException {
         getValues();
 
        con.guardar("UPDATE Activos  SET nombreActivo = '"+nom+"', ubicacionActivo = "+dir+"," +
@@ -39,7 +39,7 @@ public class EditarActivosControl {
         clear();
     }
 
-    @FXML   void busquedaUsuario(ActionEvent event) throws SQLException {
+    @FXML   void busquedaActivo(ActionEvent event) throws SQLException {
         String nomCon = null;
         String dirCon = null;
          idAct =  Integer.parseInt(idActivo.getText());
@@ -62,6 +62,7 @@ public class EditarActivosControl {
     }
 
     private void clear(){
+        idActivo.clear();
         editNombre.clear();
         editDireccion.clear();
     }
