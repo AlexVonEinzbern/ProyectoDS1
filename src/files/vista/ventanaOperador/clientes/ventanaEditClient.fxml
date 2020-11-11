@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="120.0" layoutY="7.0" prefHeight="540.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <VBox prefHeight="520.0" prefWidth="473.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="475.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="nombre" prefHeight="10.0" promptText="Nombre" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="cedula" prefHeight="10.0" promptText="Documento de identidad" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="direccion" prefHeight="10.0" promptText="Direccion" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="telefono" prefHeight="10.0" promptText="Telefono" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <DatePicker fx:id="fecha" prefWidth="386.0" promptText="Fecha de afiliacion" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5; -fx-min-width: 90; -fx-pref-height: 200;" />
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                  <TextField fx:id="email" prefHeight="10.0" promptText="Correo electronico" style="-fx-border-color: #14862d; -fx-border-radius: 5 5 5 5;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+               </children>
+            </VBox>
+            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="475.0" layoutY="415.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="277.0" fitWidth="375.0" layoutX="475.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0">
+               <image>
+                  <Image url="@../../../../images/addCliete.jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="nombre1" layoutX="475.0" layoutY="80.0" prefHeight="35.0" prefWidth="236.0" promptText="ID cliente" style="-fx-border-radius: 5 5 5 5;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Button fx:id="registrar1" alignment="CENTER" contentDisplay="CENTER" layoutX="730.0" layoutY="81.0" mnemonicParsing="false" onAction="#addUsuario" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
