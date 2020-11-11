@@ -51,26 +51,17 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                </children>
             </VBox>
-            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="475.0" layoutY="415.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE">
+            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="475.0" layoutY="415.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <ImageView fitHeight="277.0" fitWidth="375.0" layoutX="475.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0">
+            <ImageView fitHeight="277.0" fitWidth="375.0" layoutX="459.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0">
                <image>
                   <Image url="@../../../../images/addCliete.jpg" />
                </image>
             </ImageView>
-            <TextField fx:id="nombre1" layoutX="475.0" layoutY="80.0" prefHeight="35.0" prefWidth="236.0" promptText="ID cliente" style="-fx-border-radius: 5 5 5 5;">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </TextField>
-            <Button fx:id="registrar1" alignment="CENTER" contentDisplay="CENTER" layoutX="730.0" layoutY="81.0" mnemonicParsing="false" onAction="#addUsuario" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
+            <AnchorPane layoutX="475.0" layoutY="333.0" opacity="0.22" prefHeight="49.0" prefWidth="375.0" style="-fx-background-color: #14862d;" />
          </children>
       </AnchorPane>
    </children>
