@@ -51,7 +51,7 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                </children>
             </VBox>
-            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="475.0" layoutY="415.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE">
+            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="475.0" layoutY="415.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>

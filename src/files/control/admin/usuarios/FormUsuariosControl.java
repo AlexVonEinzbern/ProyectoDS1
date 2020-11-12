@@ -52,11 +52,6 @@ public class FormUsuariosControl {
         String sede = sedes.getValue().toString();
         String rol = roles.getValue().toString();
 
-
-       /* nuevo= new Usuario(nombreUsuario.getText(), Integer.parseInt(cedula),
-                direccionUsu.getText(), Integer.parseInt(telefonoUsu.getText()),new Date(System.currentTimeMillis()),
-                sedes.getValue().toString(),roles.getValue().toString(),true, cedula);
-*/
         int in = con.guardar("INSERT INTO usuarios (nombreusuario, cedulausuario, direccionusuario, telefonousuario," +
                 "                fechaingresousuario, sucursalusuario, rolusuario, password,estadousuario,emailusuario)" +
                 "                VALUES('"+nom+"', "+ced+", '"+dir+"', "+tel+"," +

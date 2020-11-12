@@ -1,6 +1,7 @@
 package files;
 
 import files.control.admin.AdminControl;
+import files.control.obrero.ObreroControl;
 import files.modelo.ConexionBase;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -27,8 +28,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
       //  primaryStage.initStyle(StageStyle.TRANSPARENT);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("vista/ventanaAdmin.fxml"));
-        AdminControl controller = new AdminControl(con=new ConexionBase());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("vista/ventanaOperador.fxml"));
+        ObreroControl controller = new ObreroControl(con=new ConexionBase());
         loader.setController(controller);
         Parent root = loader.load();
         Scene scene = new Scene(root);
