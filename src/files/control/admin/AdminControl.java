@@ -55,10 +55,7 @@ public class AdminControl implements Initializable {
 
 
     @FXML    void addUsuario(ActionEvent event) throws IOException {
-
-        editBton.setDisable(false);
-        statBton.setDisable(false);
-        allBton.setDisable(false);
+        enable();
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/ventanaAdmin.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
@@ -71,10 +68,7 @@ public class AdminControl implements Initializable {
     }
 
     @FXML    void editUsser(ActionEvent event) throws IOException {
-
-        addBton.setDisable(false);
-        statBton.setDisable(false);
-        allBton.setDisable(false);
+        enable();
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/ventanaAdminEditar.fxml"));
         EditarUsuariosControl controller = new EditarUsuariosControl(con);
@@ -87,10 +81,7 @@ public class AdminControl implements Initializable {
     }
 
     @FXML    void showStatus(ActionEvent event) throws IOException {
-
-        editBton.setDisable(false);
-        addBton.setDisable(false);
-        allBton.setDisable(false);
+        enable();
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/ventanaAdminEstado.fxml"));
         EstadoUsuariosControl controller = new EstadoUsuariosControl(con);
@@ -103,9 +94,7 @@ public class AdminControl implements Initializable {
     }
 
     @FXML    void showUssers(ActionEvent event) throws IOException, SQLException {
-        editBton.setDisable(false);
-        addBton.setDisable(false);
-        statBton.setDisable(false);
+        enable();
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/PanelUsuarios.fxml"));
         ListaUsuariosControl controller = new ListaUsuariosControl(con);
@@ -125,7 +114,7 @@ public class AdminControl implements Initializable {
                 panelAllActivos,panelAnadirActivos,panelEditarActivos);
         activosBton.setDisable(true);
         usuarioBton.setDisable(false);
-        disable();
+        enable();
         panelFuncionesActivos.setVisible(true);
         panelFuncionesUsuario.setVisible(false);
     }
@@ -139,7 +128,7 @@ public class AdminControl implements Initializable {
                 panelAllActivos,panelAnadirActivos,panelEditarActivos);
         activosBton.setDisable(false);
         usuarioBton.setDisable(true);
-        disable();
+        enable();
         panelFuncionesActivos.setVisible(false);
         panelFuncionesUsuario.setVisible(true);
     }
@@ -195,7 +184,7 @@ public class AdminControl implements Initializable {
         panelFuncionesUsuario.setVisible(false);
     }
 
-    public void disable(){
+    public void enable(){
         addBton.setDisable(false);
         editBton.setDisable(false);
         statBton.setDisable(false);
