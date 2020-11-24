@@ -1,6 +1,7 @@
 package files;
 
 import files.control.admin.AdminControl;
+import files.control.getente.GerenteControl;
 import files.control.obrero.ObreroControl;
 import files.modelo.ConexionBase;
 import javafx.application.Application;
@@ -24,7 +25,8 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-    */    // admin
+    */ /*
+     // operador
     @Override
     public void start(Stage primaryStage) throws Exception{
       //  primaryStage.initStyle(StageStyle.TRANSPARENT);
@@ -34,6 +36,36 @@ public class Main extends Application {
         Parent root = loader.load();
         Scene scene = new Scene(root);
        // scene.setFill(Color.TRANSPARENT);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Admin");
+        primaryStage.show();
+    }
+    /*
+    // Admin
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        //  primaryStage.initStyle(StageStyle.TRANSPARENT);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("vista/ventanaAdmin.fxml"));
+        AdminControl controller = new AdminControl(con=new ConexionBase());
+        loader.setController(controller);
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        // scene.setFill(Color.TRANSPARENT);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Admin");
+        primaryStage.show();
+    }
+*/
+    // Gerente
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        //  primaryStage.initStyle(StageStyle.TRANSPARENT);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("vista/ventanaGerente.fxml"));
+        GerenteControl controller = new GerenteControl(con=new ConexionBase());
+        loader.setController(controller);
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        // scene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Admin");
         primaryStage.show();

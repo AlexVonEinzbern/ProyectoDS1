@@ -43,7 +43,7 @@
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
-            <ImageView fx:id="btConfigurar" fitHeight="31.0" fitWidth="37.0" layoutX="781.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="16.0" AnchorPane.topAnchor="13.0">
+            <ImageView fx:id="btConfigurar" fitHeight="31.0" fitWidth="37.0" layoutX="781.0" layoutY="13.0" onMouseClicked="#abrirConfiguraciones" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="16.0" AnchorPane.topAnchor="13.0">
                <image>
                   <Image url="@../../images/ajustes.png" />
                </image>

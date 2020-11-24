@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Circle;
@@ -30,6 +31,7 @@ public class AdminControl implements Initializable {
     private AnchorPane panelAnadirActivos;
     private AnchorPane panelEditarActivos;
     private AnchorPane panelAllActivos;
+    private AnchorPane panelConfig;
 
     public AdminControl(ConexionBase con) throws IOException {
         this.con = con;
@@ -110,8 +112,7 @@ public class AdminControl implements Initializable {
         bienvenida.setVisible(false);
         activesCircle.setVisible(true);
         userCircle.setVisible(false);
-        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
-                panelAllActivos,panelAnadirActivos,panelEditarActivos);
+        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,panelConfig);
         activosBton.setDisable(true);
         usuarioBton.setDisable(false);
         enable();
@@ -124,8 +125,7 @@ public class AdminControl implements Initializable {
         bienvenida.setVisible(false);
         activesCircle.setVisible(false);
         userCircle.setVisible(true);
-        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
-                panelAllActivos,panelAnadirActivos,panelEditarActivos);
+        panelPrincipal.getChildren().removeAll(panelAllActivos,panelAnadirActivos,panelEditarActivos,panelConfig);
         activosBton.setDisable(false);
         usuarioBton.setDisable(true);
         enable();
@@ -143,8 +143,7 @@ public class AdminControl implements Initializable {
         panelAnadirActivos = loader.load();
         addBtonActivos.setDisable(true);
         //this.btAnadir.getScene().setRoot(root);
-        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
-                panelAllActivos,panelEditarActivos);
+        panelPrincipal.getChildren().removeAll(panelAllActivos,panelEditarActivos);
         panelPrincipal.getChildren().add(panelAnadirActivos) ;
     }
 
@@ -158,8 +157,7 @@ public class AdminControl implements Initializable {
         panelEditarActivos = loader.load();
         editBtonActivos.setDisable(true);
         //this.btAnadir.getScene().setRoot(root);
-        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
-                panelAllActivos,panelAnadirActivos);
+        panelPrincipal.getChildren().removeAll(panelAllActivos,panelAnadirActivos);
         panelPrincipal.getChildren().add(panelEditarActivos);
     }
 
@@ -173,9 +171,27 @@ public class AdminControl implements Initializable {
         panelAllActivos = loader.load();
         allBtonActivos.setDisable(true);
         //this.btAnadir.getScene().setRoot(root);
-        panelPrincipal.getChildren().removeAll(panelUsuarios,panelStatus,panelAnadir,panelEditar,
-                panelAnadirActivos,panelEditarActivos);
+        panelPrincipal.getChildren().removeAll(panelAnadirActivos,panelEditarActivos);
         panelPrincipal.getChildren().add(panelAllActivos);
+    }
+
+    @FXML    void abrirConfiguraciones(MouseEvent event) throws IOException {
+        editBtonActivos.setDisable(false);
+        allBtonActivos.setDisable(false);
+        panelFondo.setVisible(false);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/ventanaConfig.fxml"));
+        ConfigControl controller = new ConfigControl(con);
+        loader.setController(controller);
+        panelConfig = loader.load();
+        panelFuncionesActivos.setVisible(false);
+        panelFuncionesUsuario.setVisible(false);
+        activesCircle.setVisible(false);
+        userCircle.setVisible(false);
+        activosBton.setDisable(false);
+        usuarioBton.setDisable(false);
+        panelPrincipal.getChildren().removeAll(panelStatus,panelAnadir,panelEditar,
+                panelAnadirActivos,panelEditarActivos,panelAllActivos);
+        panelPrincipal.getChildren().add(panelConfig);
     }
 
     @Override
