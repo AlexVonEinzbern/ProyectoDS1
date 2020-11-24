@@ -51,7 +51,7 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
                </children>
             </VBox>
-            <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" layoutX="475.0" layoutY="415.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE">
+            <Button fx:id="Actualizar" alignment="CENTER" contentDisplay="CENTER" layoutX="475.0" layoutY="415.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
@@ -61,12 +61,12 @@
                   <Image url="@../../../../images/addCliete.jpg" />
                </image>
             </ImageView>
-            <TextField fx:id="nombre1" layoutX="475.0" layoutY="80.0" prefHeight="35.0" prefWidth="236.0" promptText="ID cliente" style="-fx-border-radius: 5 5 5 5;">
+            <TextField fx:id="idCliente" layoutX="475.0" layoutY="80.0" prefHeight="35.0" prefWidth="236.0" promptText="ID cliente" style="-fx-border-radius: 5 5 5 5;">
                <font>
                   <Font size="17.0" />
                </font>
             </TextField>
-            <Button fx:id="registrar1" alignment="CENTER" contentDisplay="CENTER" layoutX="730.0" layoutY="81.0" mnemonicParsing="false" onAction="#addUsuario" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
+            <Button fx:id="buscarBton" alignment="CENTER" contentDisplay="CENTER" layoutX="730.0" layoutY="81.0" mnemonicParsing="false" onAction="#buscarCL" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
