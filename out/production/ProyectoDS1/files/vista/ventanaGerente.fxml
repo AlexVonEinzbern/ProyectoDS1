@@ -21,9 +21,9 @@
             <HBox fx:id="panelFuncionesGerente" layoutX="260.0" layoutY="30.0" prefHeight="24.0" prefWidth="374.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="28.0">
                <children>
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="btonConsultUser" mnemonicParsing="false" onAction="#addActivos" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="CONSULT USER" />
+                  <Button fx:id="btonConsultUser" mnemonicParsing="false" onAction="#reportesUsuarios" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="CONSULT USER" />
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="btonConsultActive" mnemonicParsing="false" onAction="#addActivos" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="CONSULT ACTIVE" />
+                  <Button fx:id="btonConsultActive" mnemonicParsing="false" onAction="#reportesActivos" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="CONSULT ACTIVE" />
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
