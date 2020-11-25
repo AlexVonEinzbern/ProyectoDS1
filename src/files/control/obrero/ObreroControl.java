@@ -17,13 +17,26 @@ import javafx.scene.shape.Circle;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class ObreroControl implements Initializable {
     private ConexionBase con;
     private AnchorPane panelAddCliente,panelEditCliente,panelStatusCliente;
-    public ObreroControl(ConexionBase base) {
+    public ObreroControl(ConexionBase base) throws SQLException {
         this.con = base;
+        LocalDate date = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        System.out.println(date.format(formatter));
+        ResultSet rs = con.consultar("Select idcliente,estadoCliente from Cliente where idCliente =" +
+                " (select idCliente from factura where idFactura)");
+        while (rs.next()){
+           
+
+        }
     }
     @FXML    private ImageView LOGO;
     @FXML    private HBox panelFuncionesFacturas;

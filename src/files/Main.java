@@ -25,7 +25,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-    */ /*
+    */
      // operador
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -55,7 +55,7 @@ public class Main extends Application {
         primaryStage.setTitle("Admin");
         primaryStage.show();
     }
-*/
+*//*
     // Gerente
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -70,7 +70,7 @@ public class Main extends Application {
         primaryStage.setTitle("Admin");
         primaryStage.show();
     }
-
+*/
     public static void main(String[] args) {
         launch(args);
         con.cerrar();

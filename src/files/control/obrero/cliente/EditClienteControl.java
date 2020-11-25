@@ -45,7 +45,7 @@ public class EditClienteControl {
         String dirCon = null;
         String tel=null,doc=null,ema=null;
         int idcli =  Integer.parseInt(idCliente.getText());
-        ResultSet rs = con.consultar("Select * from Activos where idCliente = "+idcli);
+        ResultSet rs = con.consultar("Select * from clientes where idCliente = "+idcli);
         while (rs.next()){
             nomCon = rs.getString(2);
             dirCon = rs.getString(4);
