@@ -28,14 +28,17 @@ public class ObreroControl implements Initializable {
     private AnchorPane panelAddCliente,panelEditCliente,panelStatusCliente;
     public ObreroControl(ConexionBase base) throws SQLException {
         this.con = base;
-        LocalDate date = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        System.out.println(date.format(formatter));
-        ResultSet rs = con.consultar("Select idcliente,estadoCliente from Cliente where idCliente =" +
-                " (select idCliente from factura where idFactura)");
+        // busca a los clientes que tienen mas de 60 dias sin pagar la factura y los inablilita ;
+        ResultSet rs = con.consultar(
+                "Select idcliente,estadoCliente from Cliente where idCliente =" +
+                        "(select idCliente from factura where " +
+                        "idFactura not in (select idFactura from RegistroPago )" +
+                        "and fechaVenceFactura <= (current_date - '60 day'::interval));");
         while (rs.next()){
-           
-
+           if(rs.getBoolean(2)){
+               int i = con.guardar("update cliente set estadocliente = false" +
+                       "where idcliente ="+ rs.getInt(1)+";");
+           }
         }
     }
     @FXML    private ImageView LOGO;
