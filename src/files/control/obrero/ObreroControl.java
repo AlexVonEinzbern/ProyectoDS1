@@ -1,9 +1,9 @@
 package files.control.obrero;
 
-import files.control.admin.activos.EditarActivosControl;
 import files.control.obrero.cliente.AddClienteControl;
 import files.control.obrero.cliente.EditClienteControl;
 import files.control.obrero.cliente.StatusClienteControl;
+import files.control.obrero.facturas.RegistrarPagos;
 import files.modelo.ConexionBase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,13 +19,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class ObreroControl implements Initializable {
     private ConexionBase con;
-    private AnchorPane panelAddCliente,panelEditCliente,panelStatusCliente;
+    private AnchorPane panelAddCliente,panelEditCliente,panelStatusCliente,panelGenerarFacturas,panelRegistrarPago;
     public ObreroControl(ConexionBase base) throws SQLException {
         this.con = base;
         // busca a los clientes que tienen mas de 60 dias sin pagar la factura y los inablilita ;
@@ -33,7 +31,7 @@ public class ObreroControl implements Initializable {
                 "Select idcliente,estadoCliente from Cliente where idCliente =" +
                         "(select idCliente from factura where " +
                         "idFactura not in (select idFactura from RegistroPago )" +
-                        "and fechaVenceFactura <= (current_date - '60 day'::interval));");
+                        "and fechaVenceFactura <= (current_date - '2 month'::interval));");
         while (rs.next()){
            if(rs.getBoolean(2)){
                int i = con.guardar("update cliente set estadocliente = false" +
@@ -43,9 +41,8 @@ public class ObreroControl implements Initializable {
     }
     @FXML    private ImageView LOGO;
     @FXML    private HBox panelFuncionesFacturas;
-    @FXML    private Button addBtonActivos;
-    @FXML    private Button editBtonActivos;
-    @FXML    private Button allBtonActivos;
+    @FXML    private Button registrarBtn;
+    @FXML    private Button generarbtn;
     @FXML    private HBox panelFuncionesCliete;
     @FXML    private Button addBton;
     @FXML    private Button editBton;
@@ -64,6 +61,7 @@ public class ObreroControl implements Initializable {
         clienteBton.setDisable(true);
         panelFuncionesCliete.setVisible(true);
         panelFuncionesFacturas.setVisible(false);
+        panelPrincipal.getChildren().removeAll(panelGenerarFacturas,panelRegistrarPago);
     }
 
     @FXML    void addCliente(ActionEvent event) throws IOException {
@@ -120,16 +118,36 @@ public class ObreroControl implements Initializable {
         clienteBton.setDisable(false);
         panelFuncionesCliete.setVisible(false);
         panelFuncionesFacturas.setVisible(true);
+        registrarBtn.setDisable(false);
+        generarbtn.setDisable(false);
+        panelPrincipal.getChildren().removeAll(panelStatusCliente,panelAddCliente,panelEditCliente);
     }
 
-    @FXML    void addActivos(ActionEvent event) {
-
+    @FXML    void verGenerarFacturasPanel(ActionEvent event) throws IOException {
+        registrarBtn.setDisable(false);
+        panelFondo.setVisible(false);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaOperador/facturas/generarFacturas.fxml"));
+        RegistrarPagos controller = new RegistrarPagos(con);
+        loader.setController(controller);
+        panelGenerarFacturas= loader.load();
+        generarbtn.setDisable(true);
+        //this.btAnadir.getScene().setRoot(root);
+        panelPrincipal.getChildren().removeAll(panelRegistrarPago);
+        panelPrincipal.getChildren().add(panelGenerarFacturas);
     }
-    @FXML    void editActivos(ActionEvent event) throws IOException {
 
-    }
-    @FXML    void showActivos(ActionEvent event) {
-
+    @FXML    void verRegistrarpanel(ActionEvent event) throws IOException {
+        generarbtn.setDisable(false);
+        panelFondo.setVisible(false);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                "../../vista/ventanaOperador/facturas/RegistarPago.fxml"));
+        RegistrarPagos controller = new RegistrarPagos(con);
+        loader.setController(controller);
+        panelRegistrarPago= loader.load();
+        registrarBtn.setDisable(true);
+        //this.btAnadir.getScene().setRoot(root);
+        panelPrincipal.getChildren().removeAll(panelGenerarFacturas);
+        panelPrincipal.getChildren().add(panelRegistrarPago );
     }
 
     @Override

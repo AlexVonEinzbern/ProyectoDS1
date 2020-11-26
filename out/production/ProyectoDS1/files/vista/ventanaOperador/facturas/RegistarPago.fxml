@@ -1,13 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="limpiar" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="555.0" layoutY="454.0" mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Limpiar" textFill="WHITE" AnchorPane.rightAnchor="241.0" AnchorPane.topAnchor="454.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="idFactura" layoutX="83.0" layoutY="30.0" prefHeight="33.0" prefWidth="317.0" promptText="ID factura" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="30.0" />
+      <VBox layoutX="83.0" layoutY="125.0" prefHeight="305.0" prefWidth="317.0" AnchorPane.bottomAnchor="170.0" AnchorPane.topAnchor="125.0">
+         <children>
+            <TextField fx:id="idCliente" editable="false" prefHeight="33.0" prefWidth="267.0" promptText="Id Cliente" />
+            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />
+            <TextField fx:id="nombreCliente" editable="false" prefHeight="33.0" prefWidth="267.0" promptText="Nombre Cliente" />
+            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />
+            <TextField fx:id="cedulaCLiente" editable="false" prefHeight="33.0" prefWidth="267.0" promptText="Documento de identidad" />
+            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />
+            <TextField fx:id="fechaDeVencimiento" editable="false" layoutX="10.0" layoutY="146.0" prefHeight="33.0" prefWidth="267.0" promptText="Fecha Vencimiento" />
+            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />
+            <TextField fx:id="valorApagar" editable="false" prefHeight="33.0" prefWidth="267.0" promptText="Valor a pagar" />
+         </children>
+      </VBox>
+      <Button fx:id="registrar" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="432.0" layoutY="397.0" mnemonicParsing="false" onAction="#registrarPago" prefHeight="33.0" prefWidth="169.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Registrar Pago" textFill="WHITE" AnchorPane.bottomAnchor="170.0" AnchorPane.rightAnchor="299.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="234.0" fitWidth="473.0" layoutX="425.6976013183594" layoutY="125.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="123.576416015625" AnchorPane.topAnchor="125.0">
+         <image>
+            <Image url="@../../../../images/addCliete.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="imprimir" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="621.0" layoutY="397.0" mnemonicParsing="false" onAction="#imprimirRecibo" prefHeight="33.0" prefWidth="169.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Imprimir Recibo" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="buscar" alignment="CENTER" contentDisplay="CENTER" layoutX="748.0" layoutY="30.0" mnemonicParsing="false" onAction="#BuscarFactura" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="idUsuario" layoutX="419.0" layoutY="30.0" prefHeight="33.0" prefWidth="317.0" promptText="ID Usuario" />
+   </children>
 </AnchorPane>

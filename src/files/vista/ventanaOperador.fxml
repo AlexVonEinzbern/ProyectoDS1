@@ -22,11 +22,11 @@
             <HBox fx:id="panelFuncionesFacturas" layoutX="260.0" layoutY="30.0" prefHeight="24.0" prefWidth="376.0" visible="false" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="264.0" AnchorPane.topAnchor="28.0">
                <children>
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="addBtonActivos" mnemonicParsing="false" onAction="#addActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="REG PAYMENT" />
+                  <Button fx:id="registrarBtn" mnemonicParsing="false" onAction="#verRegistrarpanel" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="REG PAYMENT" />
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="editBtonActivos" mnemonicParsing="false" onAction="#editActivos" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="GENER INVOICES" />
+                  <Button fx:id="generarbtn" mnemonicParsing="false" onAction="#verGenerarFacturasPanel" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="GENER INVOICES" />
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="allBtonActivos" mnemonicParsing="false" onAction="#showActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ALGUNA COSA" />
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ALGUNA COSA" />
                   <Line endX="540.0" endY="220.4191131591797" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
