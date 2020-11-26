@@ -6,12 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TableView layoutX="19.0" layoutY="59.0" prefHeight="200.0" prefWidth="381.0" style="-fx-border-color: #14862d;" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
         <columns>
-          <TableColumn prefWidth="256.66668701171875" style="-fx-background-color: #14862d; -fx-text-fill: white;" text="ID Usuario" />
+          <TableColumn prefWidth="256.66668701171875" style="-fx-background-color: #14862d; -fx-text-fill: white;" text="ID Cliente" />
           <TableColumn minWidth="0.0" prefWidth="278.6666259765625" style="-fx-background-color: #14862d;" text="ID factura" />
             <TableColumn prefWidth="267.3333740234375" style="-fx-background-color: #14862d;" text="Valor a pagar" />
         </columns>
