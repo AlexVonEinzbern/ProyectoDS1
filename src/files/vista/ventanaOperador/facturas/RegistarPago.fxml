@@ -45,10 +45,11 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="buscar" alignment="CENTER" contentDisplay="CENTER" layoutX="572.0" layoutY="100.0" mnemonicParsing="false" onAction="#BuscarFactura" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
+      <Button fx:id="buscar" alignment="CENTER" contentDisplay="CENTER" layoutX="765.0" layoutY="100.0" mnemonicParsing="false" onAction="#BuscarFactura" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
+      <TextField fx:id="idUsuario" layoutX="436.0" layoutY="100.0" prefHeight="33.0" prefWidth="317.0" promptText="ID Usuario" />
    </children>
 </AnchorPane>
