@@ -1,5 +1,6 @@
 package files.control.obrero;
 
+import files.control.LoginControl;
 import files.control.obrero.cliente.AddClienteControl;
 import files.control.obrero.cliente.EditClienteControl;
 import files.control.obrero.cliente.StatusClienteControl;
@@ -10,11 +11,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -149,6 +155,24 @@ public class ObreroControl implements Initializable {
         //this.btAnadir.getScene().setRoot(root);
         panelPrincipal.getChildren().removeAll(panelGenerarFacturas);
         panelPrincipal.getChildren().add(panelRegistrarPago );
+    }
+    @FXML    void cerrarSesion(ActionEvent event) throws IOException {
+        Stage ventana = (Stage) registrarBtn.getScene().getWindow();
+        ventana.close();
+        Stage primaryStage = new Stage();
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaLogin.fxml"));
+        LoginControl controller = new LoginControl(con = new ConexionBase());
+        loader.setController(controller);
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    @FXML
+    void salirApp(ActionEvent event) {
+        System.exit(0);
     }
 
     @Override
