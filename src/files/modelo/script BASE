@@ -94,8 +94,9 @@ RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
+create TRIGGER oninsertMedidaFTGG after insert ON Medida FOR EACH ROW EXECUTE PROCEDURE oninsertMedidaF();
 
--- trigger para evidenciar que se pago una factura 
+-- trigger para evidenciar que se pago una factura
 CREATE or replace  FUNCTION oninsertRegistropago() RETURNS TRIGGER AS $$
 BEGIN
 update Factura set estadoFactura = true where idFactura = new.idFActura;
@@ -136,16 +137,8 @@ INSERT INTO configurarsistema (idUsuario, fechaConfiguracion, interesMora, recon
 INSERT INTO configurarsistema (idUsuario, fechaConfiguracion, interesMora, reconexion, unidadEnergia) VALUES (3, '2019-12-05', 0.01, 34000, 500);
 
 /*Datos para la tabla Medida*/
-INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (1, 1, '2020-10-29', 20.2);
-INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (2, 1, '2020-10-29', 40.2);
+INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (1, 1, current_date, 20.2);
+INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (2, 1, current_date, 40.2);
 INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (3, 2, '2020-10-29', 36.5);
 INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (4, 2, '2020-10-29', 48.1);
 INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (5, 2, '2020-10-29', 53.8);
-
-
-select c.idCliente,nombreCliente,cedulaCliente,estadoCliente,medida,fechaVenceFactura,
-reconexion,unidadEnergia, fechaVenceFactura - current_date as interes,f.idfactura
-from factura as f,cliente as c,detalleFactura as d,medida as m,configurarsistema as con
-where not estadofactura and f.idCliente = c.idCliente and
-f.idfactura = d.idfactura and c.idcliente = m.idcliente
-and d.idConfiguracion = con.idConfiguracion;
