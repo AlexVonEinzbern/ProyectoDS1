@@ -1,4 +1,5 @@
 package files.control.admin;
+import files.control.LoginControl;
 import files.control.admin.activos.EditarActivosControl;
 import files.control.admin.activos.FormActivosControl;
 import files.control.admin.activos.ListaActivosControl;
@@ -11,11 +12,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -209,4 +215,23 @@ public class AdminControl implements Initializable {
         editBtonActivos.setDisable(false);
         allBtonActivos.setDisable(false);
         }
+    @FXML    void cerrarSesion(ActionEvent event) throws IOException {
+        Stage ventana = (Stage) allBton.getScene().getWindow();
+        ventana.close();
+        Stage primaryStage = new Stage();
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaLogin.fxml"));
+        LoginControl controller = new LoginControl(con = new ConexionBase());
+        loader.setController(controller);
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    @FXML
+    void salirApp(ActionEvent event) {
+        System.exit(0);
+    }
+
 }

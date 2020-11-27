@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -48,23 +50,18 @@
                   <Image url="@../../images/ajustes.png" />
                </image>
             </ImageView>
-            <Button fx:id="usuarioBton" layoutX="200.0" layoutY="20.0" mnemonicParsing="false" onAction="#accionesUsuario" prefHeight="22.0" prefWidth="57.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Ussers" AnchorPane.bottomAnchor="18.0" AnchorPane.topAnchor="20.0">
+            <Button fx:id="usuarioBton" layoutX="207.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionesUsuario" prefHeight="22.0" prefWidth="58.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Ussers" AnchorPane.bottomAnchor="32.0" AnchorPane.topAnchor="6.0">
                <font>
-                  <Font size="10.0" />
+                  <Font size="12.0" />
                </font></Button>
-            <Button fx:id="activosBton" layoutX="204.0" layoutY="39.0" mnemonicParsing="false" onAction="#accionesActivos" prefHeight="15.0" prefWidth="53.0" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Actives" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="39.0">
+            <Button fx:id="activosBton" layoutX="205.0" layoutY="30.0" mnemonicParsing="false" onAction="#accionesActivos" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Actives" AnchorPane.bottomAnchor="4.0" AnchorPane.topAnchor="30.0">
                <font>
-                  <Font size="10.0" />
+                  <Font size="12.0" />
                </font>
             </Button>
-            <Label layoutX="113.0" layoutY="30.0" text="ADMIN" textFill="#9e9e9e">
-               <font>
-                  <Font name="System Italic" size="13.0" />
-               </font>
-            </Label>
-            <Circle fx:id="userCircle" fill="#14862d" layoutX="198.0" layoutY="32.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" visible="false" />
-            <Circle fx:id="activesCircle" fill="#14862d" layoutX="198.0" layoutY="51.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" visible="false" />
-            <AnchorPane fx:id="bienvenida" layoutX="279.0" layoutY="32.0">
+            <Circle fx:id="userCircle" fill="#14862d" layoutX="203.0" layoutY="18.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" visible="false" />
+            <Circle fx:id="activesCircle" fill="#14862d" layoutX="203.0" layoutY="44.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" visible="false" />
+            <AnchorPane fx:id="bienvenida" layoutX="279.0" layoutY="20.0">
                <children>
                   <ImageView fitHeight="27.0" fitWidth="13.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -74,6 +71,12 @@
                   <Label layoutX="32.0" layoutY="2.0" opacity="0.64" text="Bienvenido, seleccione una opcción" textFill="SPRINGGREEN" />
                </children>
             </AnchorPane>
+            <MenuButton layoutX="108.0" layoutY="18.0" mnemonicParsing="false" style="-fx-background-color: #0c162b;" text="ADMIN" textFill="#f2ecec">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" style="-fx-text-fill: #0c162b;" text="Cerrar sesion" />
+                  <MenuItem mnemonicParsing="false" onAction="#salirApp" style="-fx-text-fill: #0c162b;" text="Salir" />
+               </items>
+            </MenuButton>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="panelPrincipal" layoutX="120.0" layoutY="215.0" prefHeight="449.0" prefWidth="913.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
