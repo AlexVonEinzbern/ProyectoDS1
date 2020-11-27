@@ -78,7 +78,7 @@ if(select estadoCliente from cliente where idcliente = new.idcliente) then
 	    	factura as f where f.idcliente = new.idcliente
 		    and not estadoFactura )) then
     delete from medida where idmedida = new.idmedida ;
-    update medida set medida = medida + new.medida
+    update medida set medida = medida + new.medida , fechamedida = current_date
  	    where idmedida =
 	    (select idmedida from medida as m where idcliente = new.idcliente order by idmedida limit 1);
     end if;
