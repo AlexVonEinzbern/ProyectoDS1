@@ -59,13 +59,14 @@ public class ObreroControl implements Initializable {
     @FXML    private Button facturasBton;
     @FXML    private Circle clienteCircle;
     @FXML    private Circle facturasCircle;
-    @FXML    private AnchorPane bienvenidaOPerador;
+    @FXML    private AnchorPane bienvenida;
     @FXML    private AnchorPane panelPrincipal;
     @FXML    private AnchorPane panelFondo;
 
     @FXML    void panelCliente(ActionEvent event) {
         facturasBton.setDisable(false);
         clienteBton.setDisable(true);
+        bienvenida.setVisible(false);
         panelFuncionesCliete.setVisible(true);
         panelFuncionesFacturas.setVisible(false);
         panelPrincipal.getChildren().removeAll(panelGenerarFacturas,panelRegistrarPago);
@@ -73,6 +74,7 @@ public class ObreroControl implements Initializable {
 
     @FXML    void addCliente(ActionEvent event) throws IOException {
         panelFondo.setVisible(false);
+        bienvenida.setVisible(false);
         enableBtonClientes();
         FXMLLoader loader = new FXMLLoader(getClass().getResource(
                 "../../vista/ventanaOperador/clientes/ventanaAddClient.fxml"));
