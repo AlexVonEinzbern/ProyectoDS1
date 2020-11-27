@@ -35,9 +35,34 @@ public class GenerarFacturas implements Initializable {
     @FXML    private Button generarBtn;
     @FXML    private Button buscar;
     @FXML    private TextField factura;
+    @FXML    private TextField nombreClienteF;
+    @FXML    private TextField idFacturaF;
+    @FXML    private TextField valorAPagarF;
 
     @FXML    void BuscarFactura(ActionEvent event) {
 
+        try {
+            int fact = Integer.parseInt(factura.getText());
+            ResultSet rs = con.consultar(
+                    "select nombreCliente,estadoCliente,medida, reconexion,unidadEnergia, " +
+                            " fechaVenceFactura - current_date as interes, f.idfactura "+
+                            " from factura as f,cliente as c,detalleFactura as " +
+                            " d,medida as m,configurarsistema as con " +
+                            " where not estadofactura and f.idfactura = "+fact+"and f.idCliente = c.idCliente and " +
+                            " f.idfactura = d.idfactura and c.idcliente = m.idcliente " +
+                            " and d.idConfiguracion = con.idConfiguracion ;");
+
+            while(rs.next()){
+                nombreClienteF.setText(rs.getString(2));
+                idFacturaF.setText(String.valueOf(rs.getInt(10)));
+                valorAPagarF.setText(String.valueOf(valorAPagar(rs.getInt("interes"),
+                        !rs.getBoolean("estadoCliente"),rs.getInt("reconexion"),
+                        rs.getInt("unidadEnergia"),rs.getInt("medida"))));
+
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
     @FXML    void generarFactura(ActionEvent event) {
 
@@ -50,7 +75,7 @@ public class GenerarFacturas implements Initializable {
         facturaTable.setCellValueFactory(new PropertyValueFactory<>("FacturaTable"));
         valorAPagar.setCellValueFactory(new PropertyValueFactory<>("ValorAPagar"));
         try {
-            ResultSet rs = con.consultar( // ERROR pero no se porque AYUDA
+            ResultSet rs = con.consultar(
                     "select c.idCliente,nombreCliente,cedulaCliente,estadoCliente,medida,fechaVenceFactura, " +
                             " reconexion,unidadEnergia, fechaVenceFactura - current_date as interes,f.idfactura "+
                             " from factura as f,cliente as c,detalleFactura as d,medida as m,configurarsistema as con " +
@@ -69,8 +94,8 @@ public class GenerarFacturas implements Initializable {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        tablaFacturas.setItems(datos);
 
+        tablaFacturas.setItems(datos);
     }
     public int valorAPagar(int interes,boolean estado,int reconexion,int costoUnidad,int consumo){
         int valor = costoUnidad * consumo;
@@ -117,5 +142,5 @@ public class GenerarFacturas implements Initializable {
             valorAPagar.set(fName);
         }
     }
- 
+
 }

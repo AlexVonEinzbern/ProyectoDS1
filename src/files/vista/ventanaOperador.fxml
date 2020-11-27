@@ -57,16 +57,6 @@
             </Button>
             <Circle fx:id="clienteCircle" fill="#14862d" layoutX="236.0" layoutY="23.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" />
             <Circle fx:id="facturasCircle" fill="#14862d" layoutX="236.0" layoutY="42.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" />
-            <AnchorPane fx:id="bienvenidaOPerador" layoutX="279.0" layoutY="32.0" visible="false">
-               <children>
-                  <ImageView fitHeight="27.0" fitWidth="13.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/leftArrow.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="32.0" layoutY="2.0" opacity="0.64" text="Bienvenido, seleccione una opcción" textFill="SPRINGGREEN" />
-               </children>
-            </AnchorPane>
             <MenuButton layoutX="105.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: #0c162b;" text="OPERADOR" textFill="#f2ecec">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" style="-fx-text-fill: #0c162b;" text="Cerrar sesion" />
