@@ -46,25 +46,28 @@ public class RegistrarPagos {
             nombreCliente.setText(rs.getString(2));
             cedulaCLiente.setText(rs.getString(3));
             fechaDeVencimiento.setText(String.valueOf(rs.getDate(6)));
-            valor = rs.getInt(5)*rs.getInt(8);
-            int interes = rs.getInt(9);
-            if(interes<0){
-                if((interes*-1)>30){
-                    valor *= 0.30;
-                }else{
-                    valor *= (interes*-1/100);
-                }
-                if(!rs.getBoolean(4)){
-                    valor+=  rs.getInt("7");
-                }
-            }
-
-            valorApagar.setText(""+valor);
+            valorApagar.setText(""+valorAPagar(rs.getInt(9),!rs.getBoolean(4),
+                    rs.getInt("7"),rs.getInt(5),rs.getInt(8)));
             registrar.setDisable(false);
             imprimir.setDisable(false);
             limpiar.setDisable(false);
         }
 
+    }
+
+    public int valorAPagar(int interes,boolean estado,int reconexion,int costoUnidad,int consumo){
+        int valor = costoUnidad * consumo;
+        if (interes < 0) {
+            if((interes*-1)>30){
+                valor *= 0.30;
+            }else{
+                valor *= (interes*-1/100);
+            }
+            if(estado){
+                valor+=  reconexion;
+            }
+        }
+        return valor;
     }
 // la ultima configuracion del sistema es (select * from configurarsistema order by idconfiguracion desc limit 1)
     @FXML    void registrarPago(ActionEvent event) throws SQLException {

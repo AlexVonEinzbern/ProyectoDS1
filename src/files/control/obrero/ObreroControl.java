@@ -3,6 +3,7 @@ package files.control.obrero;
 import files.control.obrero.cliente.AddClienteControl;
 import files.control.obrero.cliente.EditClienteControl;
 import files.control.obrero.cliente.StatusClienteControl;
+import files.control.obrero.facturas.GenerarFacturas;
 import files.control.obrero.facturas.RegistrarPagos;
 import files.modelo.ConexionBase;
 import javafx.event.ActionEvent;
@@ -127,7 +128,7 @@ public class ObreroControl implements Initializable {
         registrarBtn.setDisable(false);
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaOperador/facturas/generarFacturas.fxml"));
-        RegistrarPagos controller = new RegistrarPagos(con);
+        GenerarFacturas controller = new GenerarFacturas(con);
         loader.setController(controller);
         panelGenerarFacturas= loader.load();
         generarbtn.setDisable(true);
