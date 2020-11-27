@@ -74,7 +74,6 @@ public class ObreroControl implements Initializable {
 
     @FXML    void addCliente(ActionEvent event) throws IOException {
         panelFondo.setVisible(false);
-        bienvenida.setVisible(false);
         enableBtonClientes();
         FXMLLoader loader = new FXMLLoader(getClass().getResource(
                 "../../vista/ventanaOperador/clientes/ventanaAddClient.fxml"));
@@ -123,6 +122,7 @@ public class ObreroControl implements Initializable {
     }
 
     @FXML    void panelFacturas(ActionEvent event) {
+        bienvenida.setVisible(false);
         facturasBton.setDisable(true);
         clienteBton.setDisable(false);
         panelFuncionesCliete.setVisible(false);

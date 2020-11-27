@@ -11,9 +11,9 @@
    <children>
       <TableView fx:id="tablaFacturas" layoutX="56.0" layoutY="102.0" prefHeight="274.0" prefWidth="786.0" style="-fx-border-color: #14862d;" AnchorPane.bottomAnchor="224.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="102.0">
         <columns>
-          <TableColumn fx:id="idCliente" editable="false" prefWidth="256.66668701171875" style="-fx-background-color: #14862d; -fx-text-fill: white;" text="Cliente" />
+          <TableColumn fx:id="cliente" editable="false" prefWidth="256.66668701171875" style="-fx-background-color: #14862d; -fx-text-fill: white;" text="Cliente" />
           <TableColumn fx:id="facturaTable" editable="false" minWidth="0.0" prefWidth="319.0" style="-fx-background-color: #14862d;" text="Factura" />
-            <TableColumn fx:id="valorApagar" editable="false" prefWidth="228.0" style="-fx-background-color: #14862d;" text="Valor a pagar" />
+            <TableColumn fx:id="valorAPagar" editable="false" prefWidth="228.0" style="-fx-background-color: #14862d;" text="Valor a pagar" />
         </columns>
       </TableView>
       <Button fx:id="generarBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="368.0" layoutY="400.0" mnemonicParsing="false" onAction="#generarFactura" prefHeight="33.0" prefWidth="176.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Generar" textFill="WHITE" AnchorPane.bottomAnchor="167.0">

@@ -59,12 +59,6 @@ public class GenerarFacturas implements Initializable {
                             " and d.idConfiguracion = con.idConfiguracion ;");
 
             while(rs.next()){
-                System.out.println(
-                        "nombreCliente = "+rs.getString(2)+"\n " +
-                        "id Factura = "+rs.getInt(10)+"\n " +
-                        "Valor a Pagar = "+valorAPagar(rs.getInt("interes"),!rs.getBoolean("estadoCliente"),
-                                rs.getInt("reconexion"),rs.getInt("unidadEnergia"),rs.getInt("medida"))+"\n " );
-
                datos.add(new GenerarFacturas.ListaFactura(
                         rs.getString(2),
                         String.valueOf(rs.getInt(10)),
@@ -123,4 +117,5 @@ public class GenerarFacturas implements Initializable {
             valorAPagar.set(fName);
         }
     }
+ 
 }
