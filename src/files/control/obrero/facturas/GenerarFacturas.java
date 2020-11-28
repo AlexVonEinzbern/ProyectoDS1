@@ -53,8 +53,8 @@ public class GenerarFacturas implements Initializable {
                             " and d.idConfiguracion = con.idConfiguracion ;");
 
             while(rs.next()){
-                nombreClienteF.setText(rs.getString(2));
-                idFacturaF.setText(String.valueOf(rs.getInt(10)));
+                nombreClienteF.setText(rs.getString(1));
+                idFacturaF.setText(String.valueOf(rs.getInt(7)));
                 valorAPagarF.setText(String.valueOf(valorAPagar(rs.getInt("interes"),
                         !rs.getBoolean("estadoCliente"),rs.getInt("reconexion"),
                         rs.getInt("unidadEnergia"),rs.getInt("medida"))));
@@ -65,7 +65,9 @@ public class GenerarFacturas implements Initializable {
         }
     }
     @FXML    void generarFactura(ActionEvent event) {
+        if(!cliente.getText().equals("")){
 
+        }
     }
 
     @Override
