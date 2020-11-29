@@ -142,4 +142,4 @@ INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES 
 INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (2, 1, 8603190,current_date, 40.2);
 INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (3, 2, 2480137,'2020-10-29', 36.5);
 INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (4, 2, 1990722,'2020-10-29', 48.1);
-INSERT INTO medida (idCliente, idUsuario,i dActivo, fechamedida, medida) VALUES (5, 2, 3461831,'2020-10-29', 53.8);
+INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (5, 2, 3461831,'2020-10-29', 53.8);
