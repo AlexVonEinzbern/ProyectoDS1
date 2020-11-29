@@ -42,7 +42,7 @@ CREATE TABLE Medida(
 	idMedida SMALLSERIAL NOT NULL PRIMARY KEY,
 	idCliente SMALLSERIAL REFERENCES Cliente,
 	idUsuario SMALLSERIAL REFERENCES Usuarios,
-	idActivo  int REFERENCES idActivo,
+	idActivo  int REFERENCES Activos,
 	fechaMedida DATE,
 	medida DECIMAL
 );
@@ -143,3 +143,4 @@ INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES 
 INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (3, 2, 2480137,'2020-10-29', 36.5);
 INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (4, 2, 1990722,'2020-10-29', 48.1);
 INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (5, 2, 3461831,'2020-10-29', 53.8);
+
