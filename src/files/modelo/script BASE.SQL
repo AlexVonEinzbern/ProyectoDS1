@@ -20,6 +20,7 @@ CREATE TABLE Cliente(
 	cedulaCliente INT NOT NULL,
 	direccionCliente VARCHAR(50),
 	telefonoCLiente INT,
+	tipoCliente varchar(30) Check (tipoCliente in ('Comercial','Residencial')),
 	fechaAfiliacionCliente DATE,
 	estadoCliente BOOLEAN,
 	emailCliente VARCHAR(50) NOT NULL
@@ -117,11 +118,11 @@ INSERT INTO usuarios (nombreusuario, cedulausuario, direccionusuario, telefonous
 INSERT INTO usuarios (nombreusuario, cedulausuario, direccionusuario, telefonousuario, fechaingresousuario, sucursalusuario, rolusuario, estadousuario, emailusuario, password) VALUES ('MARIA CRISTINA HENRIQUEZ FANDIÑO', 16550922, 'Ap #121-2397 Bibendum Rd.', 3190264, '2003-07-01', 'Norte', 'Gerente', true, 'MARIA.CRISTINA.HENRIQUEZ.FANDIÑO@ergy.com', 'X16DW7sww');
 
 /*Datos para la tabla Clientes*/
-INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente) VALUES ('HUGO TEJERA GARRIDO', 16791223, 'P.O. Box 588, 4063 Molestie Rd.', 9776080, '2013-12-01', true, 'HUGO.TEJERA.GARRIDO@gmail.com');
-INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente) VALUES ('MARINA RECUERO NOYA', 16860319, 'P.O. Box 561, 7790 Aliquam Road', 2408606, '2018-02-10', true, 'MARINA.RECUERO.NOYA@gmail.com');
-INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente) VALUES ('MANUEL CAMARERO VILLALONGA', 16230117, '140-8801 Eu, Rd.', 9603013, '2015-07-07', true, 'MANUEL.CAMARERO.VILLALONGA@gmail.com');
-INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente) VALUES ('MARGARITA SOLE ESCOBEDO', 16770109, '511-1298 Velit. St.', 2471026, '2009-01-01', true, 'MARGARITA.SOLE.ESCOBEDO@gmail.com');
-INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente) VALUES ('MARC TENDERO COLOMER', 16811212, 'Ap #368-9591 Metus St.', 9706173, '2019-08-05', true, 'MARC.TENDERO.COLOMER@gmail.com');
+INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente,tipoCliente) VALUES ('HUGO TEJERA GARRIDO', 16791223, 'P.O. Box 588, 4063 Molestie Rd.', 9776080, '2013-12-01', true, 'HUGO.TEJERA.GARRIDO@gmail.com','Comercial');
+INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente,tipoCliente) VALUES ('MARINA RECUERO NOYA', 16860319, 'P.O. Box 561, 7790 Aliquam Road', 2408606, '2018-02-10', true, 'MARINA.RECUERO.NOYA@gmail.com','Residencial');
+INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente,tipoCliente) VALUES ('MANUEL CAMARERO VILLALONGA', 16230117, '140-8801 Eu, Rd.', 9603013, '2015-07-07', true, 'MANUEL.CAMARERO.VILLALONGA@gmail.com','Comercial');
+INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente,tipoCliente) VALUES ('MARGARITA SOLE ESCOBEDO', 16770109, '511-1298 Velit. St.', 2471026, '2009-01-01', true, 'MARGARITA.SOLE.ESCOBEDO@gmail.com','Residencial');
+INSERT INTO cliente (nombreCliente, cedulaCliente, direccionCliente, telefonoCLiente, fechaAfiliacionCliente, estadoCliente, emailCliente,tipoCliente) VALUES ('MARC TENDERO COLOMER', 16811212, 'Ap #368-9591 Metus St.', 9706173, '2019-08-05', true, 'MARC.TENDERO.COLOMER@gmail.com','Comercial');
 
 /*Datos para la tabla Activos*/
 INSERT INTO activos (idActivo, nombreActivo, ubicacionActivo) VALUES (6189545, 'General Electric', '143-4859 Curae; St.');

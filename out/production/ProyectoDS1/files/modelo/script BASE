@@ -42,6 +42,7 @@ CREATE TABLE Medida(
 	idMedida SMALLSERIAL NOT NULL PRIMARY KEY,
 	idCliente SMALLSERIAL REFERENCES Cliente,
 	idUsuario SMALLSERIAL REFERENCES Usuarios,
+	idActivo  int REFERENCES Activos,
 	fechaMedida DATE,
 	medida DECIMAL
 );
@@ -137,8 +138,9 @@ INSERT INTO configurarsistema (idUsuario, fechaConfiguracion, interesMora, recon
 INSERT INTO configurarsistema (idUsuario, fechaConfiguracion, interesMora, reconexion, unidadEnergia) VALUES (3, '2019-12-05', 0.01, 34000, 500);
 
 /*Datos para la tabla Medida*/
-INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (1, 1, current_date, 20.2);
-INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (2, 1, current_date, 40.2);
-INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (3, 2, '2020-10-29', 36.5);
-INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (4, 2, '2020-10-29', 48.1);
-INSERT INTO medida (idCliente, idUsuario, fechamedida, medida) VALUES (5, 2, '2020-10-29', 53.8);
+INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (1, 1, 6189545, current_date, 20.2);
+INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (2, 1, 8603190,current_date, 40.2);
+INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (3, 2, 2480137,'2020-10-29', 36.5);
+INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (4, 2, 1990722,'2020-10-29', 48.1);
+INSERT INTO medida (idCliente, idUsuario, idActivo, fechamedida, medida) VALUES (5, 2, 3461831,'2020-10-29', 53.8);
+

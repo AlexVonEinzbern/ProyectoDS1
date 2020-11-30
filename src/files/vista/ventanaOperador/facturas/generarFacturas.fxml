@@ -9,26 +9,31 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TableView fx:id="tablaFacturas" layoutX="57.0" layoutY="148.0" prefHeight="314.0" prefWidth="786.0" style="-fx-border-color: #14862d;" AnchorPane.bottomAnchor="138.0" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="148.0">
+      <TableView fx:id="tablaFacturas" layoutX="57.0" layoutY="140.0" prefHeight="314.0" prefWidth="786.0" style="-fx-border-color: #14862d;" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="140.0">
         <columns>
           <TableColumn fx:id="cliente" editable="false" prefWidth="256.66668701171875" style="-fx-background-color: #14862d; -fx-text-fill: white;" text="Cliente" />
           <TableColumn fx:id="facturaTable" editable="false" minWidth="0.0" prefWidth="319.0" style="-fx-background-color: #14862d;" text="Factura" />
             <TableColumn fx:id="valorAPagar" editable="false" prefWidth="228.0" style="-fx-background-color: #14862d;" text="Valor a pagar" />
         </columns>
       </TableView>
-      <Button fx:id="generarBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="369.0" layoutY="486.0" mnemonicParsing="false" onAction="#generarFactura" prefHeight="33.0" prefWidth="176.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Generar" textFill="WHITE" AnchorPane.bottomAnchor="81.0">
+      <Button fx:id="generarBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="474.0" layoutY="467.0" mnemonicParsing="false" onAction="#generarFactura" prefHeight="33.0" prefWidth="176.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Generar" textFill="WHITE" AnchorPane.bottomAnchor="100.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="buscar" alignment="CENTER" contentDisplay="CENTER" layoutX="527.0" layoutY="35.0" mnemonicParsing="false" onAction="#BuscarFactura" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
+      <Button fx:id="buscar" alignment="CENTER" contentDisplay="CENTER" layoutX="527.0" layoutY="18.0" mnemonicParsing="false" onAction="#BuscarFactura" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Buscar" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="factura" layoutX="198.0" layoutY="35.0" prefHeight="33.0" prefWidth="317.0" promptText="Factura" />
-      <TextField fx:id="nombreClienteF" layoutX="57.0" layoutY="99.0" prefHeight="33.0" prefWidth="298.0" promptText="Cliente" />
-      <TextField fx:id="idFacturaF" layoutX="369.0" layoutY="99.0" prefHeight="33.0" prefWidth="135.0" promptText="Factura" />
-      <TextField fx:id="valorAPagarF" layoutX="527.0" layoutY="99.0" prefHeight="33.0" prefWidth="246.0" promptText="Valor a Pagar" />
+      <TextField fx:id="contrato" layoutX="198.0" layoutY="18.0" prefHeight="33.0" prefWidth="317.0" promptText="Contrato" />
+      <TextField fx:id="nombreClienteF" layoutX="57.0" layoutY="82.0" prefHeight="33.0" prefWidth="298.0" promptText="Cliente" />
+      <TextField fx:id="idFacturaF" layoutX="369.0" layoutY="82.0" prefHeight="33.0" prefWidth="135.0" promptText="Factura" />
+      <TextField fx:id="valorAPagarF" layoutX="527.0" layoutY="82.0" prefHeight="33.0" prefWidth="246.0" promptText="Valor a Pagar" />
+      <Button fx:id="enviarBtn" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="226.0" layoutY="467.0" mnemonicParsing="false" onAction="#enviarFacturasClientes" prefHeight="33.0" prefWidth="176.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="ENVIAR" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
