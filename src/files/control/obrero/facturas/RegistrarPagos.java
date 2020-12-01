@@ -6,17 +6,25 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import files.modelo.CSVReader;
 import files.modelo.ConexionBase;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.stage.Window;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class RegistrarPagos {
     private ConexionBase con;
+    private CSVReader csvRead;
 
     public RegistrarPagos(ConexionBase base) {
         this.con = base;
+        csvRead = new CSVReader(con);
     }
     @FXML    private Button buscar;
     @FXML    private TextField idFactura;
@@ -91,7 +99,22 @@ public class RegistrarPagos {
     
     @FXML
     void registrarArchivo(ActionEvent event) {
-
+    	FileChooser fileChooser = new FileChooser();
+    	Stage stage = (Stage) idCliente.getScene().getWindow();
+    	File file = fileChooser.showOpenDialog(stage);
+    	
+    	if(file != null) {
+    		try {
+				csvRead.CSVReaderMedida(file);
+				VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,stage,
+	                    "Registro Pago","Pagos Registrados Exitosamente!");
+			} catch (IOException | SQLException e) {
+				// TODO Auto-generated catch block
+				VentanaAvisos.showAlert(Alert.AlertType.ERROR,stage,
+	                    "Registro Pago","Error al alcanzar archivo : "+ e);
+			}
+    	}
+    	
     }
     
     @FXML    void limpiarCampos(ActionEvent event) {
