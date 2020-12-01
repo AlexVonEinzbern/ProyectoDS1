@@ -11,12 +11,23 @@ import files.modelo.ConexionBase;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegistrarPagos {
     private ConexionBase con;
@@ -40,32 +51,42 @@ public class RegistrarPagos {
     @FXML    private Button registrarArch;
 
 
-    @FXML    void BuscarFactura(ActionEvent event) throws SQLException {
-        int idFac= Integer.parseInt(idFactura.getText());
+    @FXML    void BuscarFactura(ActionEvent event)  {
+        int idCli= Integer.parseInt(idCliente.getText());
         int valor;
-        ResultSet rs = con.consultar(
-                "select c.idCliente,nombreCliente,cedulaCliente,estadoCliente,medida,fechaVenceFactura," +
-                        "reconexion,unidadEnergia, fechaVenceFactura - current_date as interes "+
-                        "from factura as f,cliente as c,detalleFactura as d,medida as m,configurarsistema as con" +
-                        " where f.idfactura = "+idFac+" and f.idCliente = c.idCliente and " +
-                        "f.idfactura = d.idfactura and c.idcliente = m.idcliente " +
-                        "and d.idConfiguracion = con.idConfiguracion");
-        if(rs.next()){
-            idCliente.setText(""+rs.getInt(1));
-            nombreCliente.setText(rs.getString(2));
-            cedulaCLiente.setText(rs.getString(3));
-            fechaDeVencimiento.setText(String.valueOf(rs.getDate(6)));
-            valorApagar.setText(""+valorAPagar(rs.getInt(9),!rs.getBoolean(4),
-                    rs.getInt("7"),rs.getInt(5),rs.getInt(8)));
-            registrar.setDisable(false);
-            imprimir.setDisable(false);
-            limpiar.setDisable(false);
-        }
+        ResultSet rs;
+		try {
+			rs = con.consultar(
+			        "select c.idCliente,nombreCliente,cedulaCliente,estadoCliente,medida,fechaVenceFactura," +
+			                "reconexion,unidadEnergia, fechaVenceFactura - current_date as interes, f.idFactura "+
+			                "from factura as f,cliente as c,detalleFactura as d,medida as m,configurarsistema as con" +
+			                " where not estadofactura and f.idCliente = "+idCli+" and f.idCliente = c.idCliente and " +
+			                "f.idfactura = d.idfactura and c.idcliente = m.idcliente " +
+			                "and d.idConfiguracion = con.idConfiguracion");
+			  if(rs.next()){
+				  idFactura.setText(String.valueOf(rs.getInt(10)));
+				  idCliente.setText(""+rs.getInt(1));
+				  nombreCliente.setText(rs.getString(2));
+				  cedulaCLiente.setText(rs.getString(3));
+				  fechaDeVencimiento.setText(String.valueOf(rs.getDate(6)));
+				  valorApagar.setText(""+valorAPagar(rs.getDouble(9),!rs.getBoolean(4),
+						  rs.getDouble(7),rs.getDouble(5),rs.getDouble(8)));
+				  registrar.setDisable(false);
+				  limpiar.setDisable(false);
+		        }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			Window owner = nombreCliente.getScene().getWindow();
+			VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,
+					"Buscar Factura","Error Factura no encontrada: "+ e);
+			System.out.println(e);
+		}
+      
 
     }
 
-    public int valorAPagar(int interes,boolean estado,int reconexion,int costoUnidad,int consumo){
-        int valor = costoUnidad * consumo;
+    public Double valorAPagar(Double interes,boolean estado,Double reconexion,Double costoUnidad,Double consumo){
+        Double valor = costoUnidad * consumo;
         if (interes < 0) {
             if((interes*-1)>30){
                 valor *= 0.30;
@@ -91,10 +112,10 @@ public class RegistrarPagos {
             VentanaAvisos.showAlert(Alert.AlertType.ERROR,owner,
                     "Registro Pago","No hay pago que registrar verifique los campos!");
         }
-        clear();
+        
         registrar.setDisable(true);
-        imprimir.setDisable(true);
-        limpiar.setDisable(true);
+        imprimir.setDisable(false);
+        limpiar.setDisable(false);
     }
     
     @FXML
@@ -124,9 +145,26 @@ public class RegistrarPagos {
         limpiar.setDisable(true);
     }
     @FXML    void imprimirRecibo(ActionEvent event) {
-
+    	if(isFill()) {
+    		Map parametros = new HashMap();
+    		parametros.put("IDFACTURA", Integer.parseInt(idFactura.getText()));	
+    		String fileName = "src/files/facturasClientes/plantilla/recibo.jrxml" ;
+    		JasperPrint jasperPrint;
+    		JasperReport jasperDesign;
+			try {
+				jasperDesign = JasperCompileManager.compileReport(fileName);
+				jasperPrint = JasperFillManager.fillReport(jasperDesign, parametros,con.getConect());
+	    		JasperViewer.viewReport(jasperPrint, true);
+			} catch (JRException e) {
+				// TODO Auto-generated catch block
+				Window owner = this.idFactura.getScene().getWindow();
+				VentanaAvisos.showAlert(Alert.AlertType.ERROR,owner,
+	                    "Generar Recivo","Error al Generar : "+ e);
+			}
+    		
+    	}
         clear();
-        registrar.setDisable(true);
+        
         imprimir.setDisable(true);
         limpiar.setDisable(true);
     }

@@ -16,10 +16,10 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="idFactura" layoutX="83.0" layoutY="30.0" prefHeight="33.0" prefWidth="317.0" promptText="ID factura" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="30.0" />
+      <TextField fx:id="idCliente" layoutX="83.0" layoutY="30.0" prefHeight="33.0" prefWidth="317.0" promptText="Contrato" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="30.0" />
       <VBox layoutX="83.0" layoutY="125.0" prefHeight="305.0" prefWidth="317.0" AnchorPane.bottomAnchor="170.0" AnchorPane.topAnchor="125.0">
          <children>
-            <TextField fx:id="idCliente" editable="false" prefHeight="33.0" prefWidth="267.0" promptText="Id Cliente" />
+            <TextField fx:id="idFactura" editable="false" prefHeight="33.0" prefWidth="267.0" promptText="Factura Nro" />
             <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />
             <TextField fx:id="nombreCliente" editable="false" prefHeight="33.0" prefWidth="267.0" promptText="Nombre Cliente" />
             <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="recibo" pageWidth="300" pageHeight="180" columnWidth="260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cbdb7fd7-c8f1-4919-ae55-bf963370bc88">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ProyectoDS1"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="IDFACTURA" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[select *
+from RegistroPago as r,
+ Usuarios as u ,
+ Cliente as c,
+ factura as f
+ where r.idFactura =  $P{IDFACTURA} 
+  and r.idusuario = u.idusuario
+  and r.idfactura = f.idfactura
+  and f.idcliente = c.idcliente ]]>
+	</queryString>
+	<field name="idpago" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idpago"/>
+		<property name="com.jaspersoft.studio.field.label" value="idpago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registropago"/>
+	</field>
+	<field name="idusuario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idusuario"/>
+		<property name="com.jaspersoft.studio.field.label" value="idusuario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registropago"/>
+	</field>
+	<field name="idfactura" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idfactura"/>
+		<property name="com.jaspersoft.studio.field.label" value="idfactura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registropago"/>
+	</field>
+	<field name="pago" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="pago"/>
+		<property name="com.jaspersoft.studio.field.label" value="pago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registropago"/>
+	</field>
+	<field name="fechapago" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechapago"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechapago"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registropago"/>
+	</field>
+	<field name="nombreusuario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombreusuario"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombreusuario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuarios"/>
+	</field>
+	<field name="sucursalusuario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="sucursalusuario"/>
+		<property name="com.jaspersoft.studio.field.label" value="sucursalusuario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuarios"/>
+	</field>
+	<field name="idcliente" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idcliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="idcliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="nombrecliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombrecliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombrecliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="cedulacliente" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cedulacliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="cedulacliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="direccioncliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="direccioncliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="direccioncliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="telefonocliente" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="telefonocliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="telefonocliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="tipocliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipocliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipocliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="fechaafiliacioncliente" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaafiliacioncliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaafiliacioncliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="estadocliente" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="estadocliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="estadocliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="emailcliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="emailcliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="emailcliente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cliente"/>
+	</field>
+	<field name="fechavencefactura" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechavencefactura"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechavencefactura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="factura"/>
+	</field>
+	<field name="estadofactura" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="estadofactura"/>
+		<property name="com.jaspersoft.studio.field.label" value="estadofactura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="factura"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="12" uuid="a2a5ba12-410f-48a6-b312-7221a13d0782">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Recibo de pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="0" width="40" height="12" uuid="c3f8b4c4-88ff-41ce-bd86-377077a1c9b7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="167" y="0" width="100" height="12" uuid="09aefacc-7a37-4010-ad66-c36e0a3b580d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="17" width="100" height="12" uuid="ef411c42-dd51-4783-bedd-9bd8b8ffa286">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Empresa Electrica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="33" width="110" height="12" uuid="3878b193-0614-4d5d-a182-b598c4847c20">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Recibo de pago Nro.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="33" width="100" height="12" uuid="f0d06446-99fa-4a6b-9503-c8c88752df3d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{idpago}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="80" height="12" uuid="02cbda23-e10f-48fe-b015-8abbd3b0433a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Registrado por]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="50" width="150" height="12" uuid="40c8bb42-51ce-4bc4-b658-a21f9826a432">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nombreusuario}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="67" width="80" height="12" uuid="dd6170b0-670c-42bb-abff-fcd7da2c33aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Pagado en]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="67" width="150" height="12" uuid="abd26648-02a7-4f15-9ed2-476078aa17ba">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sucursalusuario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="260" height="12" uuid="693e6c46-abe3-47b7-ad59-060a2b74a091">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detalle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="60" height="12" uuid="a695a828-f813-4c38-b784-421926929feb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Factura Nro]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="24" width="70" height="12" uuid="52312b40-3459-438f-ab91-e71871f36e14">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{idfactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="24" width="70" height="12" uuid="9b942f2e-fbff-4c4f-9857-2b19e6cde7d6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{pago}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="24" width="40" height="12" uuid="0d831f59-ba6d-4f19-bda5-142e91864ee9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
