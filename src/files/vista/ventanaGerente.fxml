@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane style="-fx-background-color: #0c162b;" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="logo" fitHeight="40.0" fitWidth="141.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="791.843620300293" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <MenuButton layoutX="127.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: #0c162b;" text="GERENTE" textFill="#f2ecec">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" style="-fx-text-fill: #0c162b;" text="Cerrar sesion" />
+                  <MenuItem mnemonicParsing="false" onAction="#salirApp" style="-fx-text-fill: #0c162b;" text="Salir" />
+               </items>
+            </MenuButton>
+            <Line endX="540.0" endY="221.21200561523438" layoutX="-259.0" layoutY="-174.0" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+            <Button fx:id="btonConsultUser" layoutX="282.0" layoutY="18.0" mnemonicParsing="false" onAction="#reportesUsuarios" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="CONSULT USER" />
+            <Line endX="540.0" endY="221.21200561523438" layoutX="-69.0" layoutY="-174.0" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+            <Button fx:id="btonConsultActive" layoutX="472.0" layoutY="18.0" mnemonicParsing="false" onAction="#reportesActivos" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="CONSULT ACTIVE" />
+            <Line endX="540.0" endY="221.21200561523438" layoutX="121.0" layoutY="-174.0" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelPrincipal" layoutX="120.0" layoutY="215.0" prefHeight="449.0" prefWidth="913.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <AnchorPane fx:id="panelFondo" layoutX="10.0" layoutY="48.0">
+               <children>
+                  <ImageView fitHeight="432.0" fitWidth="661.0" layoutX="232.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/electricista.jpg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane opacity="0.6" prefHeight="432.0" prefWidth="233.0" style="-fx-background-color: #14862d;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
