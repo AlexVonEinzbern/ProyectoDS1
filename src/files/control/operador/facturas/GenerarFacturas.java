@@ -104,8 +104,8 @@ public class GenerarFacturas implements Initializable {
         		parametros.put("ValorFactura", valorApagar);
         		parametros.put("Interes", inter);
         		parametros.put("Reconexion", reconexion);
-        		String fileName = "src/files/facturasClientes/plantilla/plantilla.jrxml" ;
-        		String outFile = "src/files/facturasClientes/Factura"+idFactura+".pdf";
+        		String fileName = "/files/facturasClientes/plantilla/plantilla.jrxml" ;
+        		String outFile = "/files/facturasClientes/Factura"+idFactura+".pdf";
         		JasperPrint jasperPrint;
         		JasperReport jasperDesign = JasperCompileManager.compileReport(fileName);
         		jasperPrint = JasperFillManager.fillReport(jasperDesign, parametros,con.getConect());
@@ -145,8 +145,8 @@ public class GenerarFacturas implements Initializable {
             			parametros.put("ValorFactura", valorApagar);
             			parametros.put("Interes", inter);
             			parametros.put("Reconexion", reconexion);
-            			String fileName = "src/files/facturasClientes/plantilla/plantilla.jrxml" ;
-            			String outFile = "src/files/facturasClientes/Factura"+idFactura+".pdf";
+            			String fileName = "/files/facturasClientes/plantilla/plantilla.jrxml" ;
+            			String outFile = "/files/facturasClientes/Factura"+idFactura+".pdf";
             			JasperPrint jasperPrint;
             			JasperReport jasperDesign = JasperCompileManager.compileReport(fileName);
             			jasperPrint = JasperFillManager.fillReport(jasperDesign, parametros,con.getConect());

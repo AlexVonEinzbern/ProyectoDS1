@@ -55,7 +55,7 @@ public class EnviarFacturas {
 
             Multipart multipart = new MimeMultipart();
 
-            String file = "src/files/facturasClientes/Factura"+idFactura+".pdf"; //Factura"+idFactura+".pdf
+            String file = "/files/facturasClientes/Factura"+idFactura+".pdf"; //Factura"+idFactura+".pdf
             String fileName = "Factura "+nombreCliente;
             /*  // JAVA SE 8
             ByteArrayDataSource source = new ByteArrayDataSource(file);

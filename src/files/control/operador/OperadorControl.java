@@ -83,7 +83,7 @@ public class OperadorControl implements Initializable {
         panelFondo.setVisible(false);
         enableBtonClientes();
         FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                "../../vista/ventanaOperador/clientes/ventanaAddClient.fxml"));
+                "/files/vista/ventanaOperador/clientes/ventanaAddClient.fxml"));
         AddClienteControl controller = new AddClienteControl(con);
         loader.setController(controller);
         panelAddCliente = loader.load();
@@ -97,7 +97,7 @@ public class OperadorControl implements Initializable {
         enableBtonClientes();
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                "../../vista/ventanaOperador/clientes/ventanaEditClient.fxml"));
+                "/files/vista/ventanaOperador/clientes/ventanaEditClient.fxml"));
         EditClienteControl controller = new EditClienteControl(con);
         loader.setController(controller);
         panelEditCliente= loader.load();
@@ -110,7 +110,7 @@ public class OperadorControl implements Initializable {
         enableBtonClientes();
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                "../../vista/ventanaOperador/clientes/ventanaEstadoCliente.fxml"));
+                "/files/vista/ventanaOperador/clientes/ventanaEstadoCliente.fxml"));
         StatusClienteControl controller = new StatusClienteControl(con);
         loader.setController(controller);
         panelStatusCliente= loader.load();
@@ -143,7 +143,7 @@ public class OperadorControl implements Initializable {
     @FXML    void verGenerarFacturasPanel(ActionEvent event) throws IOException {
         registrarBtn.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaOperador/facturas/generarFacturas.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaOperador/facturas/generarFacturas.fxml"));
         GenerarFacturas controller = new GenerarFacturas(con);
         loader.setController(controller);
         panelGenerarFacturas= loader.load();
@@ -157,7 +157,7 @@ public class OperadorControl implements Initializable {
         generarbtn.setDisable(false);
         panelFondo.setVisible(false);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                "../../vista/ventanaOperador/facturas/RegistarPago.fxml"));
+                "/files/vista/ventanaOperador/facturas/RegistarPago.fxml"));
         RegistrarPagos controller = new RegistrarPagos(con);
         loader.setController(controller);
         panelRegistrarPago= loader.load();
@@ -172,7 +172,7 @@ public class OperadorControl implements Initializable {
     	generarbtn.setDisable(false);
     	panelFondo.setVisible(false);
     	FXMLLoader loader = new FXMLLoader(getClass().getResource(
-    			"../../vista/ventanaOperador/facturas/RegistrarMedida.fxml"));
+    			"/files/vista/ventanaOperador/facturas/RegistrarMedida.fxml"));
     	RegistrarMedidas controller = new RegistrarMedidas(con);
     	loader.setController(controller);
     	panelMedidas= loader.load();
@@ -188,7 +188,7 @@ public class OperadorControl implements Initializable {
         ventana.close();
         Stage primaryStage = new Stage();
         primaryStage.initStyle(StageStyle.TRANSPARENT);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaLogin.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaLogin.fxml"));
         LoginControl controller = new LoginControl(con = new ConexionBase());
         loader.setController(controller);
         Parent root = loader.load();

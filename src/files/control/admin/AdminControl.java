@@ -65,7 +65,7 @@ public class AdminControl implements Initializable {
     @FXML    void addUsuario(ActionEvent event) throws IOException {
         enable();
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/ventanaAdmin.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaAdmin/usuario/ventanaAdmin.fxml"));
         FormUsuariosControl controller = new FormUsuariosControl(con);
         loader.setController(controller);
         panelAnadir = loader.load();
@@ -78,7 +78,7 @@ public class AdminControl implements Initializable {
     @FXML    void editUsser(ActionEvent event) throws IOException {
         enable();
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/ventanaAdminEditar.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaAdmin/usuario/ventanaAdminEditar.fxml"));
         EditarUsuariosControl controller = new EditarUsuariosControl(con);
         loader.setController(controller);
         panelEditar = loader.load();
@@ -91,7 +91,7 @@ public class AdminControl implements Initializable {
     @FXML    void showStatus(ActionEvent event) throws IOException {
         enable();
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/ventanaAdminEstado.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaAdmin/usuario/ventanaAdminEstado.fxml"));
         EstadoUsuariosControl controller = new EstadoUsuariosControl(con);
         loader.setController(controller);
         panelStatus = loader.load();
@@ -104,7 +104,7 @@ public class AdminControl implements Initializable {
     @FXML    void showUssers(ActionEvent event) throws IOException, SQLException {
         enable();
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/usuario/PanelUsuarios.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaAdmin/usuario/PanelUsuarios.fxml"));
         ListaUsuariosControl controller = new ListaUsuariosControl(con);
         loader.setController(controller);
         panelUsuarios = loader.load();
@@ -143,7 +143,7 @@ public class AdminControl implements Initializable {
         editBtonActivos.setDisable(false);
         allBtonActivos.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/activos/addActive.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaAdmin/activos/addActive.fxml"));
         FormActivosControl controller = new FormActivosControl(con);
         loader.setController(controller);
         panelAnadirActivos = loader.load();
@@ -157,7 +157,7 @@ public class AdminControl implements Initializable {
         addBtonActivos.setDisable(false);
         allBtonActivos.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/activos/editActive.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaAdmin/activos/editActive.fxml"));
         EditarActivosControl controller = new EditarActivosControl(con);
         loader.setController(controller);
         panelEditarActivos = loader.load();
@@ -171,7 +171,7 @@ public class AdminControl implements Initializable {
         editBtonActivos.setDisable(false);
         allBtonActivos.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/activos/allActive.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaAdmin/activos/allActive.fxml"));
         ListaActivosControl controller = new ListaActivosControl(con);
         loader.setController(controller);
         panelAllActivos = loader.load();
@@ -185,7 +185,7 @@ public class AdminControl implements Initializable {
         editBtonActivos.setDisable(false);
         allBtonActivos.setDisable(false);
         panelFondo.setVisible(false);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaAdmin/ventanaConfig.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaAdmin/ventanaConfig.fxml"));
         ConfigControl controller = new ConfigControl(con);
         loader.setController(controller);
         panelConfig = loader.load();
@@ -220,7 +220,7 @@ public class AdminControl implements Initializable {
         ventana.close();
         Stage primaryStage = new Stage();
         primaryStage.initStyle(StageStyle.TRANSPARENT);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaLogin.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaLogin.fxml"));
         LoginControl controller = new LoginControl(con = new ConexionBase());
         loader.setController(controller);
         Parent root = loader.load();

@@ -148,7 +148,7 @@ public class RegistrarPagos {
     	if(isFill()) {
     		Map parametros = new HashMap();
     		parametros.put("IDFACTURA", Integer.parseInt(idFactura.getText()));	
-    		String fileName = "src/files/facturasClientes/plantilla/recibo.jrxml" ;
+    		String fileName = "/files/facturasClientes/plantilla/recibo.jrxml" ;
     		JasperPrint jasperPrint;
     		JasperReport jasperDesign;
 			try {

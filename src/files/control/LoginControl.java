@@ -115,7 +115,7 @@ public class LoginControl {
             switch(rol){
                 case "Admin":
                     //Ventana ventana = new Ventana(con,"../vista/ventanaAdmin.fxml",rol );
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../vista/ventanaAdmin.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaAdmin.fxml"));
                     AdminControl controller = new AdminControl(con);
                     loader.setController(controller);
                     Parent root = loader.load();
@@ -132,7 +132,7 @@ public class LoginControl {
                     win.close();
                     break;
                 case "Operador":
-                    loader = new FXMLLoader(getClass().getResource("../vista/ventanaOperador.fxml"));
+                    loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaOperador.fxml"));
                     OperadorControl contro = new OperadorControl(con);
                     loader.setController(contro);
                     root = loader.load();
@@ -148,7 +148,7 @@ public class LoginControl {
                     win.close();
                     break;
                 case "Gerente":
-                     loader = new FXMLLoader(getClass().getResource("../vista/ventanaGerente.fxml"));
+                     loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaGerente.fxml"));
                     GerenteControl contr = new GerenteControl(con);
                     loader.setController(contr);
                     root = loader.load();

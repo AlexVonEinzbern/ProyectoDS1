@@ -50,7 +50,7 @@ public class GerenteControl {
     	if(!this.idActivo.getText().equals("")) {
     		Map parametros = new HashMap();
     		parametros.put("IDACTIVO", Integer.parseInt(idActivo.getText()));
-    		String fileName = "src/files/facturasClientes/plantilla/activo.jrxml" ;
+    		String fileName = "/files/facturasClientes/plantilla/activo.jrxml" ;
     		JasperPrint jasperPrint;
     		JasperReport jasperDesign;
     		try {
@@ -64,7 +64,7 @@ public class GerenteControl {
     						"Generar Reporte","Error al Generar : "+ e);
     				}
     		}else {
-    			String fileName = "src/files/facturasClientes/plantilla/GeneralActivo.jrxml" ;
+    			String fileName = "/files/facturasClientes/plantilla/GeneralActivo.jrxml" ;
         		JasperPrint jasperPrint;
         		JasperReport jasperDesign;
         		try {
@@ -84,7 +84,7 @@ public class GerenteControl {
        	if(!this.idCliente.getText().equals("")) {
        		Map parametros = new HashMap();
        		parametros.put("IDCLIENTE", Integer.parseInt(idCliente.getText()));
-       		String fileName = "src/files/facturasClientes/plantilla/cliente.jrxml" ;
+       		String fileName = "/files/facturasClientes/plantilla/cliente.jrxml" ;
        		JasperPrint jasperPrint;
        		JasperReport jasperDesign;
        		try {
@@ -98,7 +98,7 @@ public class GerenteControl {
        						"Generar Reporte","Error al Generar : "+ e);
        				}
        		}else {
-       			String fileName = "src/files/facturasClientes/plantilla/GeneralClient.jrxml" ;
+       			String fileName = "/files/facturasClientes/plantilla/GeneralClient.jrxml" ;
            		JasperPrint jasperPrint;
            		JasperReport jasperDesign;
            		try {
@@ -119,7 +119,7 @@ public class GerenteControl {
         ventana.close();
         Stage primaryStage = new Stage();
         primaryStage.initStyle(StageStyle.TRANSPARENT);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../vista/ventanaLogin.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/files/vista/ventanaLogin.fxml"));
         LoginControl controller = new LoginControl(con = new ConexionBase());
         loader.setController(controller);
         Parent root = loader.load();
