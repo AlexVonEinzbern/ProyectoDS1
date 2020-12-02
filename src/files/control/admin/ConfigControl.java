@@ -60,9 +60,9 @@ public class ConfigControl {
     }
     
     private Boolean isFill() {
-    return	!(idUsuario.equals("") &&
-    		reconexion.equals("") &&
-    		unidadEnergia.equals("") &&
-    		interesMora.equals(""));}
+    return	!(idUsuario.getText().equals("") &&
+    		reconexion.getText().equals("") &&
+    		unidadEnergia.getText().equals("") &&
+    		interesMora.getText().equals(""));}
 
 }
