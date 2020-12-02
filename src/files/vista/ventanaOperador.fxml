@@ -21,40 +21,40 @@
                   <Image url="@../../images/logo.png" />
                </image>
             </ImageView>
-            <HBox fx:id="panelFuncionesFacturas" layoutX="308.0" layoutY="18.0" prefHeight="24.0" prefWidth="441.0" visible="false" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="308.0" AnchorPane.rightAnchor="151.0" AnchorPane.topAnchor="18.0">
+            <HBox fx:id="panelFuncionesFacturas" layoutX="332.0" layoutY="18.0" prefHeight="24.0" prefWidth="473.0" visible="false" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="332.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="18.0">
                <children>
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="registrarBtn" mnemonicParsing="false" onAction="#verRegistrarpanel" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="REG PAYMENT" />
+                  <Button fx:id="registrarBtn" mnemonicParsing="false" onAction="#verRegistrarpanel" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Registro Pagos" />
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="generarbtn" mnemonicParsing="false" onAction="#verGenerarFacturasPanel" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="GENER INVOICES" />
+                  <Button fx:id="generarbtn" mnemonicParsing="false" onAction="#verGenerarFacturasPanel" prefHeight="26.0" prefWidth="172.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Generar Facturas" />
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="medidasBtn" mnemonicParsing="false" onAction="#showPanelMedidas" prefHeight="26.0" prefWidth="184.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="REGISTRAR MEDIDAS" />
+                  <Button fx:id="medidasBtn" mnemonicParsing="false" onAction="#showPanelMedidas" prefHeight="26.0" prefWidth="184.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Registro Medidas" />
                   <Line endX="540.0" endY="220.4191131591797" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
             <HBox fx:id="panelFuncionesCliete" layoutX="308.0" layoutY="18.0" prefHeight="30.0" prefWidth="489.0" visible="false" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="308.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="18.0">
                <children>
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="addBton" mnemonicParsing="false" onAction="#addCliente" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD CLIENT" />
+                  <Button fx:id="addBton" mnemonicParsing="false" onAction="#addCliente" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Crear" />
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="editBton" mnemonicParsing="false" onAction="#editCliente" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT CLIENT" />
+                  <Button fx:id="editBton" mnemonicParsing="false" onAction="#editCliente" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Editar" />
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="statBton" mnemonicParsing="false" onAction="#statusCliente" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="STATUS CLIENT" />
+                  <Button fx:id="statBton" mnemonicParsing="false" onAction="#statusCliente" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Estado" />
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
-            <Button fx:id="clienteBton" layoutX="231.0" layoutY="11.0" mnemonicParsing="false" onAction="#panelCliente" prefHeight="22.0" prefWidth="67.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Clients" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="231.0" AnchorPane.topAnchor="11.0">
+            <Button fx:id="clienteBton" layoutX="238.0" layoutY="11.0" mnemonicParsing="false" onAction="#panelCliente" prefHeight="22.0" prefWidth="67.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Clientes" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="238.0" AnchorPane.topAnchor="11.0">
                <font>
                   <Font size="12.0" />
                </font>
             </Button>
-            <Button fx:id="facturasBton" layoutX="231.0" layoutY="29.0" mnemonicParsing="false" onAction="#panelFacturas" prefHeight="24.0" prefWidth="77.0" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Invoices" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="231.0" AnchorPane.topAnchor="29.0">
+            <Button fx:id="facturasBton" layoutX="235.0" layoutY="29.0" mnemonicParsing="false" onAction="#panelFacturas" prefHeight="24.0" prefWidth="77.0" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Facturas" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="29.0">
                <font>
                   <Font size="12.0" />
                </font>
             </Button>
-            <Circle fx:id="clienteCircle" fill="#14862d" layoutX="236.0" layoutY="23.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" />
-            <Circle fx:id="facturasCircle" fill="#14862d" layoutX="236.0" layoutY="42.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" />
+            <Circle fx:id="clienteCircle" fill="#14862d" layoutX="236.0" layoutY="23.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" visible="false" />
+            <Circle fx:id="facturasCircle" fill="#14862d" layoutX="236.0" layoutY="42.0" radius="5.0" stroke="#14862d" strokeType="INSIDE" visible="false" />
             <MenuButton layoutX="105.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: #0c162b;" text="OPERADOR" textFill="#f2ecec">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#cerrarSesion" style="-fx-text-fill: #0c162b;" text="Cerrar sesion" />

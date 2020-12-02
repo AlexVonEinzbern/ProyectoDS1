@@ -69,7 +69,8 @@ public class OperadorControl implements Initializable {
     	addBton.setDisable(false);
     	editBton.setDisable(false);
     	statBton.setDisable(false);
-    	
+    	this.clienteCircle.setVisible(true);
+    	this.facturasCircle.setVisible(false);
         facturasBton.setDisable(false);
         clienteBton.setDisable(true);
         bienvenida.setVisible(false);
@@ -118,9 +119,7 @@ public class OperadorControl implements Initializable {
         panelPrincipal.getChildren().removeAll(panelAddCliente,panelEditCliente);
         panelPrincipal.getChildren().add(panelStatusCliente);
     }
-    @FXML    void mostrarClientes(ActionEvent event) {
-
-    }
+ 
     private void enableBtonClientes(){
         statBton.setDisable(false);
         addBton.setDisable(false);
@@ -128,6 +127,8 @@ public class OperadorControl implements Initializable {
     }
 
     @FXML    void panelFacturas(ActionEvent event) {
+      	this.clienteCircle.setVisible(false);
+    	this.facturasCircle.setVisible(true);
         bienvenida.setVisible(false);
         facturasBton.setDisable(true);
         clienteBton.setDisable(false);

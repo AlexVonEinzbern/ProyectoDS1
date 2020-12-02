@@ -21,27 +21,27 @@
                   <Image url="@../../images/logo.png" />
                </image>
             </ImageView>
-            <HBox fx:id="panelFuncionesActivos" layoutX="267.0" layoutY="19.0" prefHeight="31.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="141.0" AnchorPane.topAnchor="19.0">
+            <HBox fx:id="panelFuncionesActivos" layoutX="283.0" layoutY="19.0" prefHeight="24.0" prefWidth="476.0" visible="false" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="141.0" AnchorPane.topAnchor="19.0">
                <children>
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="addBtonActivos" mnemonicParsing="false" onAction="#addActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD" />
+                  <Button fx:id="addBtonActivos" mnemonicParsing="false" onAction="#addActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Crear" />
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="editBtonActivos" mnemonicParsing="false" onAction="#editActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT" />
+                  <Button fx:id="editBtonActivos" mnemonicParsing="false" onAction="#editActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Editar" />
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="allBtonActivos" mnemonicParsing="false" onAction="#showActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ALL" />
+                  <Button fx:id="allBtonActivos" mnemonicParsing="false" onAction="#showActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Listado" />
                   <Line endX="540.0" endY="220.4191131591797" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
-            <HBox fx:id="panelFuncionesUsuario" layoutX="267.0" layoutY="19.0" prefHeight="24.0" prefWidth="492.0" visible="false" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="141.0" AnchorPane.topAnchor="19.0">
+            <HBox fx:id="panelFuncionesUsuario" layoutX="299.0" layoutY="19.0" prefHeight="24.0" prefWidth="460.0" visible="false" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="141.0" AnchorPane.topAnchor="19.0">
                <children>
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="addBton" mnemonicParsing="false" onAction="#addUsuario" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD USER" />
+                  <Button fx:id="addBton" mnemonicParsing="false" onAction="#addUsuario" prefHeight="50.0" prefWidth="104.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Crear" />
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="editBton" mnemonicParsing="false" onAction="#editUsser" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="EDIT USER" />
+                  <Button fx:id="editBton" mnemonicParsing="false" onAction="#editUsser" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Editar" />
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="statBton" mnemonicParsing="false" onAction="#showStatus" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="STATUS USER" />
+                  <Button fx:id="statBton" mnemonicParsing="false" onAction="#showStatus" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Estado" />
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
-                  <Button fx:id="allBton" mnemonicParsing="false" onAction="#showUssers" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="All USSER" />
+                  <Button fx:id="allBton" mnemonicParsing="false" onAction="#showUssers" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="LIstado" />
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
@@ -50,11 +50,11 @@
                   <Image url="@../../images/ajustes.png" />
                </image>
             </ImageView>
-            <Button fx:id="usuarioBton" layoutX="207.0" layoutY="7.0" mnemonicParsing="false" onAction="#accionesUsuario" prefHeight="22.0" prefWidth="58.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Ussers" AnchorPane.bottomAnchor="31.0" AnchorPane.topAnchor="7.0">
+            <Button fx:id="usuarioBton" layoutX="207.0" layoutY="7.0" mnemonicParsing="false" onAction="#accionesUsuario" prefHeight="22.0" prefWidth="72.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Usuarios" AnchorPane.bottomAnchor="31.0" AnchorPane.topAnchor="7.0">
                <font>
                   <Font size="12.0" />
                </font></Button>
-            <Button fx:id="activosBton" layoutX="205.0" layoutY="30.0" mnemonicParsing="false" onAction="#accionesActivos" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Actives" AnchorPane.bottomAnchor="4.0" AnchorPane.topAnchor="30.0">
+            <Button fx:id="activosBton" layoutX="205.0" layoutY="30.0" mnemonicParsing="false" onAction="#accionesActivos" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: transparent; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Activos" AnchorPane.bottomAnchor="4.0" AnchorPane.topAnchor="30.0">
                <font>
                   <Font size="12.0" />
                </font>

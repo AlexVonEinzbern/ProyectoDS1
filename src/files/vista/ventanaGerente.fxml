@@ -32,10 +32,10 @@
                   <Image url="@../../images/electricista.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="btonConsultUser" layoutX="356.0" layoutY="177.0" mnemonicParsing="false" onAction="#reportesUsuarios" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="CONSULT CLIENT" />
-            <Button fx:id="btonConsultActive" layoutX="355.0" layoutY="368.0" mnemonicParsing="false" onAction="#reportesActivos" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="CONSULT ACTIVES" />
+            <Button fx:id="btonConsultUser" layoutX="356.0" layoutY="177.0" mnemonicParsing="false" onAction="#reportesUsuarios" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Consultar Cliente" />
+            <Button fx:id="btonConsultActive" layoutX="355.0" layoutY="368.0" mnemonicParsing="false" onAction="#reportesActivos" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="Consultar Activos" />
             <TextField fx:id="idCliente" layoutX="292.0" layoutY="118.0" prefHeight="33.0" prefWidth="317.0" promptText="Contrato" />
-            <TextField fx:id="idActivo" layoutX="292.0" layoutY="313.0" prefHeight="33.0" prefWidth="317.0" promptText="Activo" />
+            <TextField fx:id="idActivo" layoutX="292.0" layoutY="313.0" prefHeight="33.0" prefWidth="317.0" promptText="ID Activo" />
          </children>
       </AnchorPane>
    </children>
