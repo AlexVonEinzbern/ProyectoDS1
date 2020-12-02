@@ -21,7 +21,7 @@
                   <Image url="@../../images/logo.png" />
                </image>
             </ImageView>
-            <HBox fx:id="panelFuncionesActivos" layoutX="260.0" layoutY="30.0" prefHeight="31.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="28.0">
+            <HBox fx:id="panelFuncionesActivos" layoutX="267.0" layoutY="19.0" prefHeight="31.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="141.0" AnchorPane.topAnchor="19.0">
                <children>
                   <Line endX="540.0" endY="221.21200561523438" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button fx:id="addBtonActivos" mnemonicParsing="false" onAction="#addActivos" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD" />
@@ -32,7 +32,7 @@
                   <Line endX="540.0" endY="220.4191131591797" startX="540.0" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                </children>
             </HBox>
-            <HBox fx:id="panelFuncionesUsuario" layoutX="260.0" layoutY="28.0" prefHeight="24.0" prefWidth="492.0" visible="false" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="28.0">
+            <HBox fx:id="panelFuncionesUsuario" layoutX="267.0" layoutY="19.0" prefHeight="24.0" prefWidth="492.0" visible="false" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="141.0" AnchorPane.topAnchor="19.0">
                <children>
                   <Line endX="539.9191284179688" endY="223.4191131591797" startX="539.9191284179688" startY="191.9191131591797" stroke="WHITE" strokeMiterLimit="0.0" />
                   <Button fx:id="addBton" mnemonicParsing="false" onAction="#addUsuario" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE;" text="ADD USER" />
@@ -50,7 +50,7 @@
                   <Image url="@../../images/ajustes.png" />
                </image>
             </ImageView>
-            <Button fx:id="usuarioBton" layoutX="207.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionesUsuario" prefHeight="22.0" prefWidth="58.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Ussers" AnchorPane.bottomAnchor="32.0" AnchorPane.topAnchor="6.0">
+            <Button fx:id="usuarioBton" layoutX="207.0" layoutY="7.0" mnemonicParsing="false" onAction="#accionesUsuario" prefHeight="22.0" prefWidth="58.0" style="-fx-background-color: #0c162b; -fx-text-fill: WHITE; -fx-border-color: Transparent;" text="Ussers" AnchorPane.bottomAnchor="31.0" AnchorPane.topAnchor="7.0">
                <font>
                   <Font size="12.0" />
                </font></Button>

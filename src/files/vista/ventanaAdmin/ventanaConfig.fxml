@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="190.0" layoutY="72.0" prefHeight="305.0" prefWidth="317.0">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />
+            <TextField fx:id="idUsuario" prefHeight="33.0" prefWidth="267.0" promptText="Id Usuario" />
+            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />
+            <TextField fx:id="reconexion" prefHeight="33.0" prefWidth="267.0" promptText="Valor de Reconexion" />
+            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />
+            <TextField fx:id="unidadEnergia" layoutX="10.0" layoutY="146.0" prefHeight="33.0" prefWidth="267.0" promptText="Valor Unidad de Energia" />
+            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" visible="false" />
+            <TextField fx:id="interesMora" prefHeight="33.0" prefWidth="267.0" promptText="porcentaje de interes por mora (EJ 0.01)" />
+         </children>
+      </VBox>
+      <Button fx:id="guardarBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="606.0" layoutY="208.0" mnemonicParsing="false" onAction="#guardarConfig" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Guardar" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="limpiarBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="606.0" layoutY="137.0" mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #14862d;                           -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" text="Limpiar" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

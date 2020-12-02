@@ -1,7 +1,7 @@
 package files.control;
 import files.control.admin.AdminControl;
 import files.control.getente.GerenteControl;
-import files.control.obrero.ObreroControl;
+import files.control.operador.OperadorControl;
 import files.modelo.VentanaAvisos;
 import files.modelo.ConexionBase;
 import javafx.application.Platform;
@@ -78,8 +78,8 @@ public class LoginControl {
     }
     @FXML
     void ConsultaLogin(ActionEvent event) throws SQLException, IOException {
-
-
+    	
+    	
         Window owner = entrar.getScene().getWindow();
         String password = contrasena.getText() ;
         String usser = null;
@@ -108,9 +108,10 @@ public class LoginControl {
              nombre = rs.getString("nombreusuario");
         }
 
-          // System.out.println(usserbase +"  "+ passwordbase +"  " + activo +"   "+ rol );
-           // System.out.println(passwordbase.equals(password) +"  "+ usserbase==usser +"   "+ activo);
+       //    System.out.println(usserbase +"  "+ passwordbase +"  " + activo +"   "+ rol );
+       //   System.out.println(passwordbase.equals(password) +"  "+ usserbase==usser +"   "+ activo);
         if(usserbase != null){
+        //	System.out.println("Entroooo");
             switch(rol){
                 case "Admin":
                     //Ventana ventana = new Ventana(con,"../vista/ventanaAdmin.fxml",rol );
@@ -130,15 +131,15 @@ public class LoginControl {
                     Stage win = (Stage) this.contrasena.getScene().getWindow();
                     win.close();
                     break;
-                case "Obrero":
-                    loader = new FXMLLoader(getClass().getResource("../vista/ventanaaObreo.fxml"));
-                    ObreroControl contro = new ObreroControl(con);
+                case "Operador":
+                    loader = new FXMLLoader(getClass().getResource("../vista/ventanaOperador.fxml"));
+                    OperadorControl contro = new OperadorControl(con);
                     loader.setController(contro);
                     root = loader.load();
                     scene = new Scene(root);
                     ventana = new Stage();
                     ventana.setScene(scene);
-                    ventana.setTitle("Obrero");
+                    ventana.setTitle("Operador");
                     ventana.show();
                     owner = ventana.getScene().getWindow();
                     VentanaAvisos.showAlert(Alert.AlertType.CONFIRMATION,owner,

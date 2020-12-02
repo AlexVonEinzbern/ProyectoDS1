@@ -72,7 +72,7 @@
                         <FXCollections fx:factory="observableArrayList">
                            <String fx:value="Admin" />
                            <String fx:value="Gerente" />
-                           <String fx:value="Obrero" />
+                           <String fx:value="Operador" />
                         </FXCollections>
                      </items>                  </ChoiceBox>
                   <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
